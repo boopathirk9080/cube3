@@ -1,23 +1,32 @@
-import React from 'react'
-import Hero from './Hero'
-import About from '../About/About'
-import Service from '../Service/Service'
-import Portfolio from '../portfolio/Portfolio'
-import ContactUs from '../contact/ContactUs'
-import Video3 from '../Hero/Video3'
+import React from "react";
+import About from "../About/About";
+import Service from "../Service/Service";
+import Portfolio from "../gallary/Gallary";
+import ContactUs from "../contact/ContactUs";
+import Video3 from "../Hero/Video3";
+import Slide from '../Slider/Slide'
+import ParallaxSlider from "../Slider/ParallaxSlider";
 function Home() {
   return (
-    <div style={{ width: "100%" }} >
+    <div id="/" style={{ width: "100%" }}>
       <Video3 />
-      <Hero />
 
-      <About />
-      <Service />
-      <Portfolio />
-      <ContactUs />
-
+      <div id="about">
+        <About />
+        {/* <Slide /> */}
+        {/* <ParallaxSlider /> */}
+      </div>
+      <div id="services">
+        <Service />
+      </div>
+      <div id="gallery">
+        <Portfolio />
+      </div>
+      <div id="contact">
+        <ContactUs />
+      </div>
     </div>
-  )
+  );
 }
 
-export default Home
+export default Home;

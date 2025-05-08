@@ -29,9 +29,9 @@ function Counter() {
     }, []);
 
     return (
-        
-        <section className=" flex items-center sm:pb-[50px]  lg:h-[100%] justify-center rounded-b-3xl px-6 sm:px-2.5  bg-gradient-to-b from-[#020d1c] via-[#081b2f] to-[#0e2952]">
-           
+
+        <section className=" flex items-center sm:pb-[50px]  lg:h-[100%] justify-center  px-6 sm:px-2.5  bg-gradient-to-b from-[#ffffff] via-[#ffffff] to-[#e8e8e849]">
+
             <div className="  mx-auto text-center">
                 <br />
                 <br />

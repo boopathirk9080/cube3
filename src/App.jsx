@@ -1,36 +1,33 @@
-
-import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
-import Home from '../src/components/home/Home'
-import Header from './components/Nav/Header';
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Home from "./components/home/Home";
+import Header from "./components/Nav/Header";
+import Footer from "./components/footer/Footer";
+import Gallery from "./components/gallary/Gallary";
 import About from "./components/About/About";
 import Service from "./components/Service/Service";
-import Footer from "./components/footer/Footer";
-import Portfolio from "./components/portfolio/Portfolio";
 import ContactUs from "./components/contact/ContactUs";
-import Video3 from "./components/Hero/Video3";
+import ScrollToTop from "./components/scrollTop/ScrollToTop";
+import ValueAddition from "./components/Value Addition/ValueAddition";
+import HomeNavbar from "./components/HomeNavebar/HomeNavebar";
 function App() {
-
   return (
-    <>
+    <Router>
 
-      <Router>
-        <Header />
-        <Routes>
+      <Header />
+      {/* <HomeNavbar /> */}
+      <ScrollToTop />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/services" element={<Service />} />
 
-          <Route path='/' element={<Home />} />
-         
-          <Route path='/about' element={<About />} />
-          <Route path='/services' element={<Service />} />
-          <Route path='/portfolio' element={<Portfolio />} />
-          <Route path='/contact' element={<ContactUs />} />
-        </Routes>
-        <Footer />
-      </Router>
-
-    </>
-  )
+        <Route path="/gallery" element={<Gallery />} />
+        <Route path="/valueaddition" element={<ValueAddition />} />
+        <Route path="/contact" element={<ContactUs />} />
+      </Routes>
+      <Footer />
+    </Router>
+  );
 }
 
-export default App
-
-
+export default App;

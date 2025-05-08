@@ -1,6 +1,4 @@
 
-import pic from '../assets/profile.jpg'
-import Cover from '../assets/Cover.jpg'
 
 import { MdOutlineVideoLibrary } from "react-icons/md";
 import { IoIosImages } from "react-icons/io";
@@ -29,32 +27,89 @@ import poster3 from '../assets/posters/pic(18).png'
 import poster4 from '../assets/posters/pic(24).png'
 import poster5 from '../assets/posters/RR_Front.jpg'
 
+// import birthdayevent from '../assets/events/birthday.png'
+// import weddingevent from '../assets/events/wedding.png'
+// import corporateevent from '../assets/events/corporate.png'
 
 
-// import { FaCode } from "react-icons/fa";
-export const navlink = [
+
+// export const navlink = [
+//     { url: "/#", text: "Home" },
+//     { url: "#about", text: "About" },
+//     { url: "#services", text: "Services" },
+//     { url: "#gallery", text: "Gallary" },
+//     { url: "#contact", text: "Contact" }
+// ];
+// export const navLinks = [
+//     {
+//         id: "home",
+//         title: "Home",
+//         path: "#"
+//     },
+//     {
+//         id: "about",
+//         title: "About",
+//         path: "#about"
+//     },
+//     {
+//         id: "services",
+//         title: "Services",
+//         path: "#services"
+//     },
+//     {
+//         id: "gallery",
+//         title: "Gallery",
+//         path: "#gallery"
+//     },
+
+//     {
+//         id: "contact",
+//         title: "Contact",
+//         path: "#contact"
+//     }
+//     ,
+
+//     {
+//         id: "phone",
+//         title: " +91 82200 03139",
+//     }
+// ];
+export const navLinks = [
     {
-        url: "/",
-        text: "Home",
+        id: "home",
+        title: "Home",
+        path: "/",
     },
     {
-        url: "/about",
-        text: "About",
+        id: "about",
+        title: "About",
+        path: "/about",
     },
     {
-        url: "/services",
-        text: "Services",
+        id: "services",
+        title: "Services",
+        path: "/services",
     },
     {
-        url: "/portfolio",
-        text: "Portfolio",
+        id: "gallery",
+        title: "Gallery",
+        path: "/gallery",
     },
     {
-        url: "/contact",
-        text: "Contact",
+        id: "valueaddition",
+        title: "Value Addition",
+        path: "/valueaddition",
+    },
+    {
+        id: "contact",
+        title: "Contact",
+        path: "/contact",
+    },
+    {
+        id: "phone",
+        title: " +91 82200 03139",
     },
 ];
-
 export const home = [
     {
         text: "HELLO I'M",
@@ -67,166 +122,119 @@ export const home = [
     },
 ];
 
-export const about = [
-    {
-        desc: "I am Boopathi R, a Frontend Developer specializing in React.js, JavaScript, HTML, and CSS (Tailwind, Bootstrap), Redux, Formik, Aos. I focus on building responsive and user-friendly web applications with modern UI/UX principles. I have worked on projects like Magenixs and Liro Studios websites, ensuring clean design and smooth functionality to enhance user experience.",
-        desc1:
-            "During my internship at Magenixs (June - Sept 2024), I worked on web application development, improving UI/UX, debugging front-end issues, and collaborating with senior developers to refine my problem-solving skills. My technical expertise includes React.js, Redux, PHP, SQL, C, Photoshop, and Figma. With a B.E. in Computer Science (2020-2024) from AVS Engineering College, I am eager to explore new opportunities, contribute to innovative projects, and grow in the tech industry.",
-        profilepik: pic,
-        coverpik: Cover
-    },
-];
 
-export const services = [
-    {
-        id: 1,
-        icon: FaCode,
-        title: "Web Development",
-        desc: "Creating responsive and dynamic websites with modern technologies like React, JavaScript, and more.",
-    },
-    {
-        id: 2,
-        icon: MdOutlineVideoLibrary,
-        title: "Video Editing",
-        desc: "Editing and enhancing videos with smooth transitions, effects, and professional touch.",
-    },
-    {
-        id: 3,
-        icon: IoIosImages,
-        title: "Image Editing",
-        desc: "Transforming images with color correction, retouching, and advanced editing techniques.",
-    },
-    {
-        id: 4,
-        icon: HiOutlineRectangleGroup,
-        title: "Poster Design",
-        desc: "Crafting eye-catching posters with unique typography and creative designs.",
-    },
-    {
-        id: 5,
-        icon: IoCrop,
-        title: "Cropping Works",
-        desc: "Precision cropping and resizing to enhance image composition and focus.",
-    },
-    {
-        id: 6,
-        icon: RiCustomerService2Fill,
-        title: "Customer Support",
-        desc: "Providing exceptional support and assistance to ensure customer satisfaction.",
-    },
-];
 
-export const portfolio = [
+export const gallery = [
     {
         id: 1,
         coverimg: web,
         name: "Brand",
-        category: "Web",
+        category: "Personal Events",
         title: "Brex Logo",
     },
     {
         id: 2,
         coverimg: app,
         name: "Brand",
-        category: "APP Poster Designs",
+        category: "Wedding",
         title: "Brex Logo",
     },
     {
         id: 3,
         coverimg: poster,
         name: "Brand",
-        category: "Poster",
+        category: "Corporate Events",
         title: "Brex Logo",
     },
     {
         id: 4,
         coverimg: web2,
         name: "Brand",
-        category: "Web",
+        category: "Personal Events",
         title: "Brex Logo",
     },
     {
         id: 5,
         coverimg: app2,
         name: "Brand",
-        category: "APP Poster Designs",
+        category: "Wedding",
         title: "Brex Logo",
     },
     {
         id: 6,
         coverimg: poster2,
         name: "Brand",
-        category: "Poster",
+        category: "Corporate Events",
         title: "Brex Logo",
     },
     {
         id: 7,
         coverimg: web4,
         name: "Brand",
-        category: "Web",
+        category: "Personal Events",
         title: "Brex Logo",
     },
     {
         id: 8,
         coverimg: app3,
         name: "Brand",
-        category: "APP Poster Designs",
+        category: "Wedding",
         title: "Brex Logo",
     },
     {
         id: 9,
         coverimg: poster3,
         name: "Brand",
-        category: "Poster",
+        category: "Corporate Events",
         title: "Brex Logo",
     },
     {
         id: 10,
         coverimg: web5,
         name: "Brand",
-        category: "Web",
+        category: "Personal Events",
         title: "Brex Logo",
     },
     {
         id: 11,
         coverimg: app4,
         name: "Brand",
-        category: "APP Poster Designs",
+        category: "Wedding",
         title: "Brex Logo",
     },
     {
         id: 12,
         coverimg: poster4,
         name: "Brand",
-        category: "Poster",
+        category: "Corporate Events",
         title: "Brex Logo",
     },
     {
         id: 13,
         coverimg: web3,
         name: "Brand",
-        category: "Web",
+        category: "Personal Events",
         title: "Brex Logo",
     },
     {
         id: 14,
         coverimg: app5,
         name: "Brand",
-        category: "APP Poster Designs",
+        category: "Wedding",
         title: "Brex Logo",
     },
     {
         id: 15,
         coverimg: poster5,
         name: "Brand",
-        category: "Poster",
+        category: "Corporate Events",
         title: "Brex Logo",
     },
     {
         id: 16,
         coverimg: app6,
         name: "Brand",
-        category: "APP Poster Designs",
+        category: "Wedding",
         title: "Brex Logo",
     },
 
