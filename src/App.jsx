@@ -2,12 +2,12 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./components/home/Home";
 import Header from "./components/Nav/Header";
 import Footer from "./components/footer/Footer";
-import Gallery from "./components/gallary/Gallary";
+import GalleryAll from "./components/gallary/GalleryAll";
 import About from "./components/About/About";
-import Service from "./components/Service/Service";
-import ContactUs from "./components/contact/ContactUs";
+import ServicesAll from "./components/Service/ServicesAll";
+import ContactAll from "./components/contact/ContactAll";
 import ScrollToTop from "./components/scrollTop/ScrollToTop";
-import ValueAddition from "./components/Value Addition/ValueAddition";
+import BlogAll from "./components/Blog/BlogAll";
 import HomeNavbar from "./components/HomeNavebar/HomeNavebar";
 function App() {
   return (
@@ -19,11 +19,11 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
-        <Route path="/services" element={<Service />} />
+        <Route path="/services" element={<ServicesAll />} />
 
-        <Route path="/gallery" element={<Gallery />} />
-        <Route path="/valueaddition" element={<ValueAddition />} />
-        <Route path="/contact" element={<ContactUs />} />
+        <Route path="/gallery" element={<GalleryAll />} />
+        <Route path="/blog" element={<BlogAll />} />
+        <Route path="/contact" element={<ContactAll />} />
       </Routes>
       <Footer />
     </Router>

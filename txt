@@ -1,0 +1,61 @@
+Cube3 Events Website
+
+Technology used
+React JS
+Tailwind CSS
+Framer Motion – Animation
+
+1.Home Page
+
+Purpose: Introduction to Cube3 Events, showcasing core services and global reach.
+
+Sections:
+
+Welcome Banner: A full‑screen background video with a welcoming message and Cube3 branding.
+Worldwide Locations: An interactive or animated section showing countries or cities where Cube3 operates.
+Our Services: Brief overview cards or sections summarizing key services, linking to the detailed services page.
+
+2.About Page
+
+Purpose: Provide insight into the company’s identity, people, and goals.
+
+Sections:
+
+About Us: Background of Cube3, history, values, and what makes them unique.
+Our Team: Profile cards of team members with photos, names, roles, and bios.
+Mission & Vision: Clear statements of the company’s purpose and future goals.
+
+3.Services Page
+
+Purpose: Showcase all services Cube3 offers with visuals.
+
+Sections:
+
+Service Listings: Each service presented with title, description, and accompanying images.
+Photo Gallery: A dedicated section or embedded mini‑galleries under each service showing event photos.
+
+4.Blog
+
+Blog List View: Thumbnails and summaries for each post.
+
+Single Blog View: Dedicated page for each post with title, date, content, images, and related posts.
+
+5.Gallery Page
+
+Purpose: Display event photos and media with filtering options.
+
+Features:
+
+Filter Options: Allow users to filter by event type.
+Responsive Grid Layout: Optimized image display that adapts to screen size.
+
+
+6.Contact Page
+
+Purpose: Provide communication channels for inquiries or bookings.
+
+Sections:
+
+Contact Form: Name, email, phone number, event type (list of values), message input fields.
+Company Details: Phone number, email address, office locations.
+Map Embed: Interactive map showing headquarters or main office location.

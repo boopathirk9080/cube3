@@ -63,7 +63,7 @@ function Gallery() {
     }, []);
 
     return (
-        <article className="py-20 md:py-32 px-4  sm:px-6 lg:px-8 w-full bg-gradient-to-t from-[#ffff] to-[#ffff]">
+        <article className="py-5 mt-10 md:pb-32 px-4  sm:px-6 lg:px-8 w-full bg-gradient-to-t from-[#ffff] to-[#e8e8e849]">
             <div className="text-center mb-8 sm:mb-12 max-w-7xl mx-auto">
                 <div>
                     <motion.div
@@ -74,7 +74,7 @@ function Gallery() {
                         transition={{ duration: 0.5 }}
                     >
                         <h2 className="text-3xl md:text-4xl text-black font-montserrat font-bold mb-4">
-                            Our <span className="text-[#ef4949]">Gallery</span>
+                            Visuals of   <span className="text-[#ef4949]">Unforgettable</span> Celebrations
                         </h2>
                         <p className="text-[#111] max-w-2xl mx-auto">
                             We handle every aspect of your event with precision and creativity,
@@ -90,13 +90,13 @@ function Gallery() {
                             key={cat}
                             onClick={() => filterItems(cat)}
                             className={
-                                `px-4 py-2 rounded-lg transition-colors text-sm sm:text-base
+                                `px-4 py-2 rounded-lg transition-colors text-2xl sm:text-base
                                   ${activeCategory === cat
                                     ? 'bg-blue-300 text-white'
                                     : 'bg-[#14305a] text-white hover:bg-blue-900'}`
                             }
                         >
-                            {cat}
+                          <b> {cat}</b> 
                         </button>
                     ))}
                 </div>

@@ -44,7 +44,7 @@ const ServicesSection = () => {
   return (
     <section
       // id="services"
-      className="bg-[#e8e8e849] py-20 md:py-32 scroll-smooth"   // ← smooth scroll
+      className="bg-[#e8e8e849] py-5 mt-10 md:pyb-32 scroll-smooth"   // ← smooth scroll
     >
       <div className="container mx-auto px-4">
         <motion.div
@@ -55,7 +55,7 @@ const ServicesSection = () => {
           transition={{ duration: 0.5 }}
         >
           <h2 className="text-3xl md:text-4xl text-[#000] font-montserrat font-bold mb-4">
-            Our <span className="text-[#ef4949]">Services</span>
+            We Craft   <span className="text-[#ef4949]">Unforgettable</span> Celebrations
           </h2>
           <p className="text-[#000000] max-w-2xl mx-auto">
             We handle every aspect of your event with precision and creativity,
@@ -64,7 +64,7 @@ const ServicesSection = () => {
         </motion.div>
 
         <motion.div
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"
+          className="grid grid-cols-1 md:grid-cols-2 lg:px-18 lg:grid-cols-3 gap-8"
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"

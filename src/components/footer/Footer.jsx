@@ -175,9 +175,14 @@ function Footer() {
                 <div className="relative inline-block">
                     <div className="absolute inset-0 bg-[#ee393e] blur-2xl opacity-10 animate-pulse-slow" />
                     <p className="text-sm text-gray-400 relative">
-                        © {new Date().getFullYear()} CUBE³ EVENTS. All Rights Reserved.
+                        © {new Date().getFullYear()} <span 
+                            style={{ cursor: "pointer" }}
+                            className="font-medium"> CUBE³ EVENTS.</span> All Rights Reserved.
                         <span className="mx-3 text-[#ee393e]">•</span>
-                        Designed by <span className="text-[#ee393e] font-medium">Liro Studios</span>
+                        Developed by <span 
+                            style={{ cursor: "pointer" }}
+                            
+                            className=" font-medium"><a href="https://www.linkedin.com/company/liro-studios">Liro Studios</a></span>
                     </p>
                 </div>
             </motion.div>

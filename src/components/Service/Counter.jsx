@@ -30,19 +30,22 @@ function Counter() {
 
     return (
 
-        <section className=" flex items-center sm:pb-[50px]  lg:h-[100%] justify-center  px-6 sm:px-2.5  bg-gradient-to-b from-[#ffffff] via-[#ffffff] to-[#e8e8e849]">
+        <section className=" flex items-center sm:pb-[50px]  lg:h-[100%]  justify-center  px-6 sm:px-2.5  bg-gradient-to-b from-[#ffffff] via-[#ffffff] to-[#e8e8e849]">
 
             <div className="  mx-auto text-center">
                 <br />
                 <br />
-                <h2 className="text-4xl font-bold text-white mb-8" data-aos="fade-up">
+                <h2 className="text-4xl font-bold text-black " data-aos="fade-up">
                     Achievements
                 </h2>
-
+                <p className="text-black text-2xl max-w-2xl py-6 mx-auto">
+                    We handle every aspect of your event with precision and creativity,
+                    ensuring a seamless experience from start to finish.
+                </p>
                 {/* Counter Grid */}
-                <div className="grid grid-cols-1 sm:grid-cols-2 pb-[30px] md:grid-cols-3 gap-10">
+                <div className="grid grid-cols-1 sm:grid-cols-2 pb-[30px]   md:grid-cols-3 gap-10">
                     {CounterData.map((item, index) => (
-                        <div key={index} className="p-6  rounded-lg bg-[#112240] shadow-lg transform hover:scale-105 transition duration-300" data-aos="fade-up">
+                        <div key={index} className="p-6  rounded-lg bg-[#5e6c84] shadow-lg transform hover:scale-105 transition duration-300" data-aos="fade-up">
                             <h3 className="text-5xl font-bold text-[#3795c4] mb-2">
                                 {counts[index]}+
                             </h3>

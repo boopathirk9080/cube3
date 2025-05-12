@@ -6,23 +6,23 @@ import ContactUs from "../contact/ContactUs";
 import Video3 from "../Hero/Video3";
 import Slide from '../Slider/Slide'
 import ParallaxSlider from "../Slider/ParallaxSlider";
+import WorldMap from "../World Map/WorldMap";
+import Counter from "../Service/Counter";
+import Base from '../Hero/Base'
 function Home() {
   return (
     <div id="/" style={{ width: "100%" }}>
       <Video3 />
-
-      <div id="about">
-        <About />
-        {/* <Slide /> */}
-        {/* <ParallaxSlider /> */}
-      </div>
-      <div id="services">
+      <Base />
+      <WorldMap />
+      <Counter />
+      <div >
         <Service />
       </div>
-      <div id="gallery">
+      <div >
         <Portfolio />
       </div>
-      <div id="contact">
+      <div >
         <ContactUs />
       </div>
     </div>

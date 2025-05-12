@@ -96,9 +96,9 @@ export const navLinks = [
         path: "/gallery",
     },
     {
-        id: "valueaddition",
-        title: "Value Addition",
-        path: "/valueaddition",
+        id: "blog",
+        title: "Blog",
+        path: "/blog",
     },
     {
         id: "contact",
