@@ -5,6 +5,7 @@ import { BiLogoWhatsapp } from "react-icons/bi";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import { useNavigate } from "react-router-dom"; // For navigation to the gallery
+import { faImage } from "@fortawesome/free-regular-svg-icons";
 
 const ServiceDetailsModal = ({ service, isOpen, onClose }) => {
     const navigate = useNavigate(); // Hook for navigation
@@ -86,16 +87,16 @@ const ServiceDetailsModal = ({ service, isOpen, onClose }) => {
                                     </ul>
                                 </div>
 
-                                <div className="flex flex-wrap gap-4 pt-4 border-t border-[#333333]">
+                                <div className="sticky bottom-[0px] pb-3   inset-x-0 mx-auto max-w-7xl px-4 flex flex-wrap gap-4 pt-4 border-t border-[#333333] bg-white z-50">
                                     <button
-                                        className="bg-[#711a1a] hover:bg-[#711a1aae] border-2 border-[#ffff] text-white px-8 py-4 rounded-full font-semibold transition-all btn-glow"
-                                        onClick={handleGalleryRedirect} // Updated handler
+                                        className="bg-[#711a1a] hover:bg-[#711a1aae] border-2 border-white  text-white px-8 py-4 rounded-full font-semibold transition-all btn-glow"
+                                        onClick={handleGalleryRedirect}
                                     >
-                                        <FontAwesomeIcon icon="fa-solid fa-image" className="mr-2" />
+                                        {/* <FontAwesomeIcon icon={faImage} className="mr-2" /> */}
                                         Check our works
                                     </button>
                                     <button
-                                        className="border-2 flex items-center border-[#ffff] bg-[#128C7E]  hover:bg-[#128c7ead]  text-white px-8 py-4 rounded-full font-semibold transition-all red-glow"
+                                        className="border-2  flex items-center border-white bg-[#128C7E] hover:bg-[#128c7ead] text-white px-8 py-4 rounded-full font-semibold transition-all red-glow"
                                         onClick={() =>
                                             window.open(
                                                 `https://wa.me/9080787009?text=Hello, I am interested in your ${service.title} services.`,
@@ -107,6 +108,7 @@ const ServiceDetailsModal = ({ service, isOpen, onClose }) => {
                                         Let's Talk
                                     </button>
                                 </div>
+
                             </div>
                         </motion.div>
                     </motion.div>

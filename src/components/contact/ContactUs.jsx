@@ -525,12 +525,12 @@
 //                                                 </a>
 //                                             </p>
 //                                         </div>
-                                        
-                                        
+
+
 // <br />
 
 //                                     </div>
-                                    
+
 //                                 </div>
 //                                  <div className="mb-8">
 //                                     <div className="flex items-start">
@@ -554,7 +554,7 @@
 //                                         </div>
 //                                     </div>
 //                                 </div>
-                                
+
 //                             </div>
 //                         </div>
 
@@ -651,6 +651,7 @@
 import { useState } from "react";
 import { FaWhatsapp, FaMapMarkerAlt, FaPhoneAlt, FaEnvelope } from "react-icons/fa";
 import { motion } from "framer-motion";
+import { RiBuilding3Fill } from "react-icons/ri";
 
 export default function Contact() {
     const [formData, setFormData] = useState({
@@ -693,7 +694,7 @@ export default function Contact() {
     return (
         <div className="bg-[#e8e8e849]">
             {/* Hero Section */}
-            <section className="lg:pb-32 pb-10 pt-5 md:pb-32 mt-10 px-4 sm:px-6 lg:px-8 w-full ">    
+            <section className="lg:pb-16 pb-10 pt-8 md:pb-32   px-4 sm:px-6 lg:px-8 w-full ">
                 <motion.div
                     className="text-center"
                     initial={{ opacity: 0, y: 20 }}
@@ -702,7 +703,7 @@ export default function Contact() {
                     transition={{ duration: 0.5 }}
                 >
                     <h2 className="text-3xl md:text-4xl text-black font-montserrat font-bold mb-4">
-                      Begin Your  <span className="text-[#ef4949]"> Exceptional</span> Event  
+                        Begin Your  <span className="text-[#ef4949]"> Exceptional</span> Event
                     </h2>
                     <p className="text-black max-w-2xl mx-auto">
                         We handle every aspect of your event with precision and creativity,
@@ -723,7 +724,7 @@ export default function Contact() {
 
                                 {/* WhatsApp Button */}
                                 <a
-                                    href="https://wa.me/9080787009"
+                                    href="https://wa.me/9080787009?text=Hi%20Cube%20Events,%20I%20want%20to%20discuss%20about%20an%20event"
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     className="flex items-center justify-center md:justify-start mb-8 bg-[#25D366] text-white py-3 px-6 rounded-lg shadow-md hover:bg-[#128C7E] transition-colors w-full md:w-auto"
@@ -735,7 +736,7 @@ export default function Contact() {
                                 {/* Address */}
                                 <div className="mb-8">
                                     <div className="flex items-start">
-                                        <div className="bg-[#ef4949] bg-opacity-10 rounded-full p-3 mr-4">
+                                        <div className="bg-[#e5e5e5] bg-opacity-10 rounded p-3 mr-4">
                                             <FaMapMarkerAlt className="text-[#ef4949] text-xl" />
                                         </div>
                                         <div>
@@ -753,7 +754,7 @@ export default function Contact() {
                                 {/* Phone */}
                                 <div className="mb-8">
                                     <div className="flex items-start">
-                                        <div className="bg-[#ef4949] bg-opacity-10 rounded-full p-3 mr-4">
+                                        <div className="bg-[#e5e5e5] bg-opacity-10 rounded p-3 mr-4">
                                             <FaPhoneAlt className="text-[#ef4949] text-xl" />
                                         </div>
                                         <div>
@@ -770,7 +771,7 @@ export default function Contact() {
                                 {/* Email */}
                                 <div className="mb-8">
                                     <div className="flex items-start">
-                                        <div className="bg-[#ef4949] bg-opacity-10 rounded-full p-3 mr-4">
+                                        <div className="bg-[#e5e5e5] bg-opacity-10 rounded p-3 mr-4">
                                             <FaEnvelope className="text-[#ef4949] text-xl" />
                                         </div>
                                         <div>
@@ -790,14 +791,14 @@ export default function Contact() {
                                 {/* Map Section */}
                                 <div className="mb-8">
                                     <div className="flex items-start">
-                                        <div className="bg-[#ef4949] bg-opacity-10 rounded-full p-3 mr-4">
+                                        <div className="bg-[#e5e5e5] bg-opacity-10 rounded p-3 mr-4">
                                             <FaMapMarkerAlt className="text-[#ef4949] text-xl" />
                                         </div>
                                         <div className="flex-1">
                                             <h3 className="font-bold text-lg mb-2 text-black">Location</h3>
                                             <div className="rounded-lg overflow-hidden shadow-sm">
-                                                <iframe 
-                                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d690.7162231050424!2d78.13723009195954!3d11.674486586565644!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3babf1ec8cefe40b%3A0xd08a94f36dd50431!2sCube3%20Events!5e0!3m2!1sen!2sin!4v1747020833413!5m2!1sen!2sin" 
+                                                <iframe
+                                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d690.7162231050424!2d78.13723009195954!3d11.674486586565644!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3babf1ec8cefe40b%3A0xd08a94f36dd50431!2sCube3%20Events!5e0!3m2!1sen!2sin!4v1747020833413!5m2!1sen!2sin"
                                                     width="100%"
                                                     height="250"
                                                     style={{ border: 0 }}

@@ -38,7 +38,7 @@ function Counter() {
                 <h2 className="text-4xl font-bold text-black " data-aos="fade-up">
                     Achievements
                 </h2>
-                <p className="text-black text-2xl max-w-2xl py-6 mx-auto">
+                <p className="text-black text-2xl max-w-2xl py-6 mx-auto" data-aos="fade-up">
                     We handle every aspect of your event with precision and creativity,
                     ensuring a seamless experience from start to finish.
                 </p>

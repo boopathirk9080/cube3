@@ -105,10 +105,12 @@ export const navLinks = [
         title: "Contact",
         path: "/contact",
     },
-    {
-        id: "phone",
-        title: " +91 82200 03139",
-    },
+    // {
+    //     id: "phone",
+    //     title: " +91 82200 03139",
+    //      url: "https://wa.me/918220003139?text=Hi%20Cube%20Events,%20I%20want%20to%20discuss%20about%20an%20event" // WhatsApp URL added
+    
+    // },
 ];
 export const home = [
     {

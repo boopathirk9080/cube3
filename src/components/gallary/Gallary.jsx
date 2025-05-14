@@ -63,11 +63,11 @@ function Gallery() {
     }, []);
 
     return (
-        <article className="py-5 mt-10 md:pb-32 px-4  sm:px-6 lg:px-8 w-full bg-gradient-to-t from-[#ffff] to-[#e8e8e849]">
+        <article className="pt-8  md:pb-32 px-4  sm:px-6 lg:px-8 w-full bg-gradient-to-t from-[#ffff] to-[#e8e8e849]">
             <div className="text-center mb-8 sm:mb-12 max-w-7xl mx-auto">
                 <div>
                     <motion.div
-                        className="text-center mb-16"
+                        className="text-center mb-8"
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
@@ -90,13 +90,13 @@ function Gallery() {
                             key={cat}
                             onClick={() => filterItems(cat)}
                             className={
-                                `px-4 py-2 rounded-lg transition-colors text-2xl sm:text-base
+                                `px-4 py-2 rounded-lg  transition-colors cursor-pointer text-[18px] lg:text-base
                                   ${activeCategory === cat
                                     ? 'bg-blue-300 text-white'
                                     : 'bg-[#14305a] text-white hover:bg-blue-900'}`
                             }
                         >
-                          <b> {cat}</b> 
+                            <b>{cat}</b> 
                         </button>
                     ))}
                 </div>

@@ -1,6 +1,6 @@
 import React from 'react'
 import BlogHead from './BlogHead'
-import Blog from './Blog'
+import Blog from '../Blog/Blog'
 function BlogAll() {
     return (
         <div id='blog' >

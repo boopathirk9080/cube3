@@ -32,12 +32,13 @@
 
 "use client";
 import { motion } from "framer-motion";
-import { LinkedIn, Instagram, Email, Twitter } from "@mui/icons-material";
+import { LinkedIn, Instagram, Email, Twitter,Phone } from "@mui/icons-material";
 import { useInView } from "react-intersection-observer";
 import { Link } from 'react-router-dom';
 import { navLinks } from "../data/data";
 import './footer.css';
 import Logo from "../assets/logo/cube-events-logo.png";
+// import { Phone, Mail } from 'lucide-react';
 const footerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -130,41 +131,57 @@ function Footer() {
                         ))}
                     </div>
                 </motion.div>
-
-                {/* Social Links */}
-                <motion.div variants={itemVariants} className="space-y-6">
-                    <h3 className="text-2xl font-bold text-[#ee393e] neon-glow">Connect</h3>
-                    <div className="flex flex-wrap gap-4">
-                        {socials.map((social, index) => (
-                            <motion.a
-                                key={index}
-                                href={social.link}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                whileHover={{
-                                    scale: 1.1,
-                                    rotate: [0, -5, 5, 0],
-                                    transition: { duration: 0.4 }
-                                }}
-                                whileTap={{ scale: 0.9 }}
-                                className="p-3 rounded-xl bg-black/40 hover:bg-[#ee393e]/20 backdrop-blur-lg transition-all duration-300 shadow-hover-glow"
+                <div className="space-y-6" >
+                    <motion.div variants={itemVariants} className="space-y-6">
+                        <h3 className="text-2xl font-bold text-[#ee393e] ">Contact Us</h3>
+                        <div className="flex flex-wrap gap-4">
+                            <motion.div
+                                //   whileHover={{ scale: 1.1 }}
+                                //   whileTap={{ scale: 0.9 }}
+                                className="p-3 rounded-xl flex  duration-300 "
                             >
-                                <motion.div
-                                    className="text-2xl"
-                                    animate={{
-                                        scale: [1, 1.1, 1],
-                                        transition: {
-                                            duration: 2 + index,
-                                            repeat: Infinity
-                                        }
+                                <Phone className="text-2xl" />
+                                <span> &nbsp; &nbsp;(+91) 82200 03139</span>
+                            </motion.div>
+                         
+                        </div>
+                    </motion.div>
+                    <motion.div variants={itemVariants} className="space-y-6">
+                        <h3 className="text-2xl font-bold text-[#ee393e] neon-glow">Connect</h3>
+                        <div className="flex flex-wrap gap-4">
+                            {socials.map((social, index) => (
+                                <motion.a
+                                    key={index}
+                                    href={social.link}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    whileHover={{
+                                        scale: 1.1,
+                                        rotate: [0, -5, 5, 0],
+                                        transition: { duration: 0.4 }
                                     }}
+                                    whileTap={{ scale: 0.9 }}
+                                    className="p-3 rounded-xl bg-black/40 hover:bg-[#ee393e]/20 backdrop-blur-lg transition-all duration-300 shadow-hover-glow"
                                 >
-                                    {social.icon}
-                                </motion.div>
-                            </motion.a>
-                        ))}
-                    </div>
-                </motion.div>
+                                    <motion.div
+                                        className="text-2xl"
+                                        animate={{
+                                            scale: [1, 1.1, 1],
+                                            transition: {
+                                                duration: 2 + index,
+                                                repeat: Infinity
+                                            }
+                                        }}
+                                    >
+                                        {social.icon}
+                                    </motion.div>
+                                </motion.a>
+                            ))}
+                        </div>
+                    </motion.div>
+                </div>
+                {/* Social Links */}
+
             </div>
 
             {/* Copyright */}
@@ -175,13 +192,13 @@ function Footer() {
                 <div className="relative inline-block">
                     <div className="absolute inset-0 bg-[#ee393e] blur-2xl opacity-10 animate-pulse-slow" />
                     <p className="text-sm text-gray-400 relative">
-                        © {new Date().getFullYear()} <span 
+                        © {new Date().getFullYear()} <span
                             style={{ cursor: "pointer" }}
                             className="font-medium"> CUBE³ EVENTS.</span> All Rights Reserved.
                         <span className="mx-3 text-[#ee393e]">•</span>
-                        Developed by <span 
+                        Developed by <span
                             style={{ cursor: "pointer" }}
-                            
+
                             className=" font-medium"><a href="https://www.linkedin.com/company/liro-studios">Liro Studios</a></span>
                     </p>
                 </div>

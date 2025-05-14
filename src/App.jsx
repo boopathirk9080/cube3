@@ -9,6 +9,7 @@ import ContactAll from "./components/contact/ContactAll";
 import ScrollToTop from "./components/scrollTop/ScrollToTop";
 import BlogAll from "./components/Blog/BlogAll";
 import HomeNavbar from "./components/HomeNavebar/HomeNavebar";
+import BlogDetails from "./components/Blog/BlogDetails";
 function App() {
   return (
     <Router>
@@ -23,6 +24,7 @@ function App() {
 
         <Route path="/gallery" element={<GalleryAll />} />
         <Route path="/blog" element={<BlogAll />} />
+          {/* <Route path="/blog/:id" element={<BlogDetails/>} /> */}
         <Route path="/contact" element={<ContactAll />} />
       </Routes>
       <Footer />

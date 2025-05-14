@@ -4,8 +4,8 @@ import Service from './Service'
 function ServicesAll() {
   return (
     <div id="services" >
-<ServicesHead/>
-<Service/>
+      <ServicesHead />
+      <Service />
     </div>
   )
 }

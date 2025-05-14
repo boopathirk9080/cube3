@@ -2,8 +2,9 @@ import { motion } from "framer-motion"
 import React, { useState, useEffect, useRef } from "react";
 import { services } from "./services";
 import ServiceDetailsModal from "./ServiceDetailsModal";
-
+import { FlipWords } from "../TextTransform/Flip-words";
 const ServicesSection = () => {
+  const words = ["Personal", "Wedding", "Fashion", "exhibitions", "Concerts & Shows"];
   const [selectedService, setSelectedService] = useState(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
 
@@ -44,7 +45,7 @@ const ServicesSection = () => {
   return (
     <section
       // id="services"
-      className="bg-[#e8e8e849] py-5 mt-10 md:pyb-32 scroll-smooth"   // ← smooth scroll
+      className="bg-[#e8e8e849] py-8  md:pyb-32 scroll-smooth"   // ← smooth scroll
     >
       <div className="container mx-auto px-4">
         <motion.div
@@ -55,7 +56,7 @@ const ServicesSection = () => {
           transition={{ duration: 0.5 }}
         >
           <h2 className="text-3xl md:text-4xl text-[#000] font-montserrat font-bold mb-4">
-            We Craft   <span className="text-[#ef4949]">Unforgettable</span> Celebrations
+            We Craft <FlipWords className="text-[#ee393e]" words={words} />Celebrations
           </h2>
           <p className="text-[#000000] max-w-2xl mx-auto">
             We handle every aspect of your event with precision and creativity,

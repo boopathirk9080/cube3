@@ -11,20 +11,14 @@ import Counter from "../Service/Counter";
 import Base from '../Hero/Base'
 function Home() {
   return (
-    <div id="/" style={{ width: "100%" }}>
+    <div id="/" className=" bg-[#e8e8e849] " style={{ width: "100%" }}>
       <Video3 />
       <Base />
       <WorldMap />
       <Counter />
-      <div >
-        <Service />
-      </div>
-      <div >
-        <Portfolio />
-      </div>
-      <div >
-        <ContactUs />
-      </div>
+      <Service />
+      <Portfolio />
+      <ContactUs />
     </div>
   );
 }
