@@ -193,7 +193,7 @@ const ScrollToTop = () => {
                     }}
                     className="fixed bottom-6 right-6 z-50 flex items-center justify-center   text-white shadow-lg rounded-lg transition-colors"
                 >
-                    <IoMdArrowDropup className=" bg-amber-700  text-3xl lg:text-4xl rounded-[5px] " />
+                    <IoMdArrowDropup className=" bg-amber-700  hover:bg-amber-800  text-4xl lg:text-4xl cursor-pointer rounded-[5px] " />
                 </motion.button>
             )}
         </>

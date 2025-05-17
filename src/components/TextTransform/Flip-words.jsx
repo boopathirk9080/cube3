@@ -26,7 +26,7 @@ export const FlipWords = ({
   }, [isAnimating, duration, startAnimation]);
 
   return (
-    <AnimatePresence
+    <AnimatePresence 
       onExitComplete={() => {
         setIsAnimating(false);
       }}>
@@ -46,10 +46,10 @@ export const FlipWords = ({
         }}
         exit={{
           opacity: 0,
-          y: -40,
-          x: 40,
+          y: -0,
+          x: 0,
           filter: "blur(8px)",
-          scale: 2,
+          scale: 1,
           position: "absolute",
         }}
         className={cn(
@@ -81,7 +81,7 @@ export const FlipWords = ({
                 {letter}
               </motion.span>
             ))}
-            <span className="inline-block">&nbsp;</span>
+            <span className="inline-block"></span>
           </motion.span>
         ))}
       </motion.div>

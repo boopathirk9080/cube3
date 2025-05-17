@@ -648,12 +648,22 @@
 // }
 
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { FaWhatsapp, FaMapMarkerAlt, FaPhoneAlt, FaEnvelope } from "react-icons/fa";
 import { motion } from "framer-motion";
 import { RiBuilding3Fill } from "react-icons/ri";
-
+import { RiBuilding2Fill } from "react-icons/ri";
+import Aos from "aos";
 export default function Contact() {
+     useEffect(() => {
+            Aos.init({
+                duration: 800,
+                once: true,
+                offset: 100
+            });
+            
+            return () => Aos.refresh();
+        }, []);
     const [formData, setFormData] = useState({
         fullName: "",
         email: "",
@@ -679,6 +689,7 @@ export default function Contact() {
         // Send message to WhatsApp
         const whatsappMessage = `Hello, my name is ${formData.fullName}. My mobile number is ${formData.mobile}. I am interested in a ${formData.eventType} event. Here is my message: ${formData.message}`;
         const whatsappURL = `https://wa.me/9080787009?text=${encodeURIComponent(whatsappMessage)}`;
+
         window.open(whatsappURL, "_blank");
 
         setFormData({
@@ -723,7 +734,7 @@ export default function Contact() {
                                 <h2 className="text-2xl font-bold mb-6 text-black">Contact Information</h2>
 
                                 {/* WhatsApp Button */}
-                                <a
+                                {/* <a
                                     href="https://wa.me/9080787009?text=Hi%20Cube%20Events,%20I%20want%20to%20discuss%20about%20an%20event"
                                     target="_blank"
                                     rel="noopener noreferrer"
@@ -731,22 +742,20 @@ export default function Contact() {
                                 >
                                     <FaWhatsapp className="text-xl mr-2" />
                                     <span>Connect on WhatsApp</span>
-                                </a>
+                                </a> */}
 
                                 {/* Address */}
                                 <div className="mb-8">
                                     <div className="flex items-start">
                                         <div className="bg-[#e5e5e5] bg-opacity-10 rounded p-3 mr-4">
-                                            <FaMapMarkerAlt className="text-[#ef4949] text-xl" />
+                                            <RiBuilding2Fill className="text-[#ef4949] text-xl" />
                                         </div>
                                         <div>
                                             <h3 className="font-bold text-lg mb-1 text-black">Address</h3>
-                                            <p className="text-black">
-                                                <b>Salem</b><br />
-                                                10, 5th Cross, Brindhavan Road, Fairlands, Salem – 636016.<br />
-                                                163/94M, Narayana Pillai Street, Peramanur, Salem – 636007.<br />
-                                                Tamilnadu, India.
-                                            </p>
+                                            <b>Salem</b><br />
+                                            <p className="text-black"> 10, 5th Cross, Brindhavan Road, Fairlands, Salem – 636016. </p>
+                                            <br /> <p>  163/94M, Narayana Pillai Street, Peramanur, Salem – 636007.<br />
+                                                Tamilnadu, India.</p>
                                         </div>
                                     </div>
                                 </div>
@@ -780,10 +789,11 @@ export default function Contact() {
                                                 <a href="mailto:contact.cube3events@gmail.com" className="hover:text-[#ef4949] transition-colors">
                                                     contact.cube3events@gmail.com
                                                 </a><br />
-                                                <a href="mailto:cube3eventssalem@gmail.com" className="hover:text-[#ef4949] transition-colors">
-                                                    cube3eventssalem@gmail.com
-                                                </a>
+
                                             </p>
+                                            <br />  <p><a href="mailto:cube3eventssalem@gmail.com" className="hover:text-[#ef4949] transition-colors">
+                                                cube3eventssalem@gmail.com
+                                            </a></p>
                                         </div>
                                     </div>
                                 </div>
@@ -796,6 +806,7 @@ export default function Contact() {
                                         </div>
                                         <div className="flex-1">
                                             <h3 className="font-bold text-lg mb-2 text-black">Location</h3>
+                                            <br />
                                             <div className="rounded-lg overflow-hidden shadow-sm">
                                                 <iframe
                                                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d690.7162231050424!2d78.13723009195954!3d11.674486586565644!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3babf1ec8cefe40b%3A0xd08a94f36dd50431!2sCube3%20Events!5e0!3m2!1sen!2sin!4v1747020833413!5m2!1sen!2sin"
@@ -888,7 +899,7 @@ export default function Contact() {
                                     </div>
                                     <button
                                         type="submit"
-                                        className="w-full bg-[#ef4949] text-white py-3 rounded-lg hover:bg-[#d93b3b] transition-colors font-medium"
+                                        className="w-full bg-[#25D366] text-white py-3 rounded-lg hover:bg-[#21a451] cursor-pointer transition-colors font-medium"
                                         disabled={isSubmitting}
                                     >
                                         {isSubmitting ? "Sending..." : "Send Message"}

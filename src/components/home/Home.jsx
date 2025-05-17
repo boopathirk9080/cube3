@@ -7,16 +7,25 @@ import Video3 from "../Hero/Video3";
 import Slide from '../Slider/Slide'
 import ParallaxSlider from "../Slider/ParallaxSlider";
 import WorldMap from "../World Map/WorldMap";
-import Counter from "../Service/Counter";
+import Counter from "../About/Counter";
 import Base from '../Hero/Base'
+import dynamic from 'next/dynamic';
+import TextTransform from "../TextTransform/TextTransform";
 function Home() {
+
   return (
-    <div id="/" className=" bg-[#e8e8e849] " style={{ width: "100%" }}>
+    <div id="/" className=" max-w-[100%] bg-[#e8e8e849] " >
       <Video3 />
+      {/* <TextTransform /> */}
+
       <Base />
-      <WorldMap />
+      <div className=" bg-[#ffff">
+        <WorldMap />
+      </div>
+
       <Counter />
       <Service />
+
       <Portfolio />
       <ContactUs />
     </div>

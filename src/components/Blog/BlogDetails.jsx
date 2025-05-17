@@ -1,13 +1,14 @@
 import { AnimatePresence, motion } from 'framer-motion';
+import { IoClose } from 'react-icons/io5';
 
 const BlogDetails = ({ service: post, isOpen, onClose }) => {
   return (
     <AnimatePresence>
       {isOpen && (
         <motion.div
-          className="fixed inset-0 z-50 backdrop-blur-sm"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
+          className="fixed inset-0 p-2 z-50 backdrop-blur-sm"
+          // initial={{ opacity: 0 }}
+          // animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
         >
           <div
@@ -16,18 +17,22 @@ const BlogDetails = ({ service: post, isOpen, onClose }) => {
           />
 
           <motion.div
-            className="relative mx-auto my-8 max-w-2xl rounded-xl bg-white shadow-xl"
+            className="relative mx-auto my-8 max-w-4xl rounded-xl bg-white shadow-xl"
             initial={{ scale: 0.95, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
             exit={{ scale: 0.95, opacity: 0 }}
             transition={{ type: 'spring', stiffness: 300, damping: 30 }}
           >
-            <button
+            <motion.button
+              className="absolute top-4 lg:right-8 right-4 font-extrabold cursor-pointer text-white text-2xl bg-[#df3939] bg-opacity-70  rounded-full h-10 w-10 flex items-center justify-center"
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }}
               onClick={onClose}
-              className="absolute right-4 top-4 text-gray-500 hover:text-gray-700"
             >
-              ✕
-            </button>
+              <IoClose />
+
+
+            </motion.button>
 
             {post && (
               <div className="max-h-[90vh] overflow-y-auto">

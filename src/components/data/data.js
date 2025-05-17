@@ -96,13 +96,13 @@ export const navLinks = [
         path: "/gallery",
     },
     {
-        id: "blog",
-        title: "Blog",
-        path: "/blog",
+        id: "blogs",
+        title: "Blogs",
+        path: "/blogs",
     },
     {
         id: "contact",
-        title: "Contact",
+        title: "Contact Us",
         path: "/contact",
     },
     // {

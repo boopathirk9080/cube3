@@ -32,7 +32,7 @@
 
 "use client";
 import { motion } from "framer-motion";
-import { LinkedIn, Instagram, Email, Twitter,Phone } from "@mui/icons-material";
+import { LinkedIn, Instagram, Email, Twitter, Phone } from "@mui/icons-material";
 import { useInView } from "react-intersection-observer";
 import { Link } from 'react-router-dom';
 import { navLinks } from "../data/data";
@@ -74,7 +74,7 @@ function Footer() {
     const filteredLinks = navLinks.filter(link => link.id !== "phone");
 
     const socials = [
-        { icon: <Email />, link: "mailto:contact.cube3events@gmail.com" },
+        // { icon: <Email />, link: "mailto:contact.cube3events@gmail.com" },
         { icon: <LinkedIn />, link: "https://www.linkedin.com/company/cube3-events/" },
         { icon: <Twitter />, link: "https://x.com/cube3_events" },
         { icon: <Instagram />, link: "https://www.instagram.com/cube3events/" }
@@ -101,7 +101,7 @@ function Footer() {
                         className="text-4xl font-bold bg-gradient-to-r from-[#ee393e] to-[#ff6b6b] bg-clip-text text-transparent"
                         whileHover={{ scale: 1.02 }}
                     >
-                        <img src={Logo} alt="" />
+                        <img src={Logo} alt=""  />
                     </motion.h3>
                     <p className="text-base text-justify leading-relaxed opacity-90 hover:opacity-100 transition-opacity duration-300">
                         Life is one great celebration. We create immersive corporate experiences
@@ -138,12 +138,21 @@ function Footer() {
                             <motion.div
                                 //   whileHover={{ scale: 1.1 }}
                                 //   whileTap={{ scale: 0.9 }}
-                                className="p-3 rounded-xl flex  duration-300 "
+                                className="px-3 rounded-xl flex  duration-300 "
                             >
                                 <Phone className="text-2xl" />
                                 <span> &nbsp; &nbsp;(+91) 82200 03139</span>
                             </motion.div>
-                         
+                           
+                                <motion.div
+                                    //   whileHover={{ scale: 1.1 }}
+                                    //   whileTap={{ scale: 0.9 }}
+                                    className="px-3 rounded-xl flex  duration-300 "
+                                >
+                                    <Email className="text-2xl" />
+                                    <span > &nbsp; &nbsp;cube3eventssalem@gmail.com</span>
+                                </motion.div>
+                            
                         </div>
                     </motion.div>
                     <motion.div variants={itemVariants} className="space-y-6">
@@ -191,10 +200,10 @@ function Footer() {
             >
                 <div className="relative inline-block">
                     <div className="absolute inset-0 bg-[#ee393e] blur-2xl opacity-10 animate-pulse-slow" />
-                    <p className="text-sm text-gray-400 relative">
+                    <p className="lg:text-sm text-xl text-gray-400 relative">
                         © {new Date().getFullYear()} <span
                             style={{ cursor: "pointer" }}
-                            className="font-medium"> CUBE³ EVENTS.</span> All Rights Reserved.
+                            className="font-medium"> CUBE3 EVENTS.</span> All Rights Reserved.
                         <span className="mx-3 text-[#ee393e]">•</span>
                         Developed by <span
                             style={{ cursor: "pointer" }}

@@ -6,7 +6,7 @@ export const eventPosts = [
     author: "Event Pro Team",
     date: "2024-04-15",
     image: blog1,
-    content: "Planning a successful corporate gala requires attention to duccessful corporate gala requires attention to duccessful corporate gala requires attention to duccessful corporate gala requires attention to duccessful corporate gala requires attention to duccessful corporate gala requires attention to duccessful corporate gala requires attention to duccessful corporate gala requires attention to duccessful corporate gala requires attention to duccessful corporate gala requires attention to duccessful corporate gala requires attention to duccessful corporate gala requires attention to detail...",
+    content: "Okay, the user wants to change the scrollbar color in their React app. Let me recall how to customize scrollbars using CSS. I know that different browsers have different pseudo-elements for styling scrollbars. For WebKit browsers like Chrome and Safari, you use ::-webkit-scrollbar. For Firefox, you can use scrollbar-color and scrollbar-width properties.",
     excerpt: "Celebrate birthdays with vibrant themes, custom entertainment, and unforgettable moments.",
     category: "Corporate Events",
     keyPoints: [
@@ -28,7 +28,7 @@ export const eventPosts = [
     author: "Wedding Experts",
     date: "2024-04-14",
     image: blog1,
-    content: "Create the perfect wedding with our comprehensive checklfect wedding with our comprehensive checfect wedding with our comprehensive checfect wedding with our comprehensive checfect wedding with our comprehensive checfect wedding with our comprehensive checfect wedding with our comprehensive checfect wedding with our comprehensive checfect wedding with our comprehensive checfect wedding with our comprehensive checfect wedding with our comprehensive checfect wedding with our comprehensive checfect wedding with our comprehensive checfect wedding with our comprehensive checist...",
+    content: "Okay, the user wants to change the scrollbar color in their React app. Let me recall how to customize scrollbars using CSS. I know that different browsers have different pseudo-elements for styling scrollbars. For WebKit browsers like Chrome and Safari, you use ::-webkit-scrollbar. For Firefox, you can use scrollbar-color and scrollbar-width properties..",
     excerpt: "Host seamless corporate events featuring professional AV, branded settings, and smooth logistics.",
     category: "Weddings",
     keyPoints: [
@@ -44,7 +44,7 @@ export const eventPosts = [
     author: "Fashion Team",
     date: "2024-04-13",
     image: blog1,
-    content: "Learn how to produce a stunn checklfect wedding with our comprehensive checfect wedding with our comprehensive checfect wedding with our comprehensive checfect wedding with our comprehensive checfect wedding with our comprehensive checfect wedding with our comprehensive checfect wedding with our comprehensive checfect wedding with our comprehensive checfect wedding with our comprehensive checfect wedding with our comprehensive checfect wedding with our comprehensive checfect wedding with our comprehensive checfect wedding with our comprehensive checing fashion show from start to finish...",
+    content: "Okay, the user wants to change the scrollbar color in their React app. Let me recall how to customize scrollbars using CSS. I know that different browsers have different pseudo-elements for styling scrollbars. For WebKit browsers like Chrome and Safari, you use ::-webkit-scrollbar. For Firefox, you can use scrollbar-color and scrollbar-width properties.",
     excerpt: "Craft dreamy weddings with bespoke florals, elegant décor, and flawless coordination.",
     category: "Fashion Events",
     keyPoints: [
@@ -66,7 +66,7 @@ export const eventPosts = [
     author: "Fashion Team",
     date: "2024-04-13",
     image: blog1,
-    content: "Learn how to produce checklfect wedding with our comprehensive checfect wedding with our comprehensive checfect wedding with our comprehensive checfect wedding with our comprehensive checfect wedding with our comprehensive checfect wedding with our comprehensive checfect wedding with our comprehensive checfect wedding with our comprehensive checfect wedding with our comprehensive checfect wedding with our comprehensive checfect wedding with our comprehensive checfect wedding with our comprehensive checfect wedding with our comprehensive chec a stunning fashion show from start to finish...",
+    content: "Learn how to produce checklfect wedding with our comprehensive checfect wedding with our comprehensive checfect wedding with our comprehensive checfect wedding with our comprehensive checfect wedding with our comprehensive checfect wedding with our comprehensive checfect wedding with our comprehensive checfect wedding with our comprehensive checfect wedding with our comprehensive checfect wedding with our comprehensive checfect wedding with our comprehensive checfect wedding with our comprehensive checfect wedding with our comprehensive chec a stunning fashion show from start to finish Okay, the user wants to change the scrollbar color in their React app. Let me recall how to customize scrollbars using CSS. I know that different browsers have different pseudo-elements for styling scrollbars. For WebKit browsers like Chrome and Safari, you use ::-webkit-scrollbar. For Firefox, you can use scrollbar-color and scrollbar-width properties.",
     excerpt: "Celebrate birthdays with vibrant themes, custom entertainment, and unforgettable moments.",
     category: "Fashion Events",
     keyPoints: [

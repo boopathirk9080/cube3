@@ -1,12 +1,12 @@
 import { motion } from "framer-motion";
 import { AnimatePresence } from "framer-motion";
 import { MdDoubleArrow } from "react-icons/md";
-import { BiLogoWhatsapp } from "react-icons/bi";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-
-import { useNavigate } from "react-router-dom"; // For navigation to the gallery
-import { faImage } from "@fortawesome/free-regular-svg-icons";
-
+import { BiLogoWhatsapp, BiPhotoAlbum } from "react-icons/bi";
+import { TbPhotoHeart } from "react-icons/tb";
+import { useNavigate } from "react-router-dom"; // For navigation to the gallery;
+import { IoClose } from "react-icons/io5";
+import { gallery } from '../data/data'; // Update path as needed
+import Aos from "aos";
 const ServiceDetailsModal = ({ service, isOpen, onClose }) => {
     const navigate = useNavigate(); // Hook for navigation
     const handleGalleryRedirect = () => {
@@ -17,107 +17,137 @@ const ServiceDetailsModal = ({ service, isOpen, onClose }) => {
         }, 100);
     };
     if (!service) return null;
+    // In ServiceDetailsModal component
+    // Add this before the return statement:
 
+    // Get all unique categories from gallery
+    const galleryCategories = [...new Set(gallery.map(item => item.category))];
+
+    // Check if current service's category exists in gallery
+    const hasGalleryCategory = galleryCategories.includes(service.Category);
     return (
         <AnimatePresence mode="sync">
-            {isOpen && (
-                <>
-                    <motion.div
-                        initial={{ opacity: 0 }}
-                        animate={{ opacity: 1 }}
-                        exit={{ opacity: 0 }}
-                        transition={{ duration: 0.3 }}
-                        className="fixed inset-0 bg-gray bg-opacity-70 backdrop-blur-sm z-50 flex items-center justify-center p-4 md:p-6"
-                        onClick={onClose}
-                    >
-                        <motion.div
-                            initial={{ opacity: 0, scale: 0.9, y: 20 }}
-                            animate={{ opacity: 1, scale: 1, y: 0 }}
-                            exit={{ opacity: 0, scale: 0.9, y: 20 }}
-                            transition={{ type: "spring", damping: 25 }}
-                            className="bg-[#ffff] rounded-xl shadow-2xl max-w-4xl w-full max-h-[90vh] overflow-y-auto"
-                            onClick={(e) => e.stopPropagation()}
-                        >
-                            <div className="relative">
-                                <div className="h-64 md:h-80 overflow-hidden rounded-t-xl">
-                                    <img
-                                        src={service.image}
-                                        alt={service.title}
-                                        className="w-full h-full object-cover"
-                                    />
-                                    <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-60"></div>
-                                </div>
 
-                                <motion.button
-                                    className="absolute top-4 right-4 bg-[#ffff] bg-opacity-70 text-white rounded-full h-10 w-10 flex items-center justify-center"
-                                    whileHover={{ scale: 1.1 }}
-                                    whileTap={{ scale: 0.9 }}
-                                    onClick={onClose}
-                                >
-                                    <i className="fas fa-times"></i>
-                                </motion.button>
+            <AnimatePresence>
+                {isOpen && (<motion.div
+                    // initial={{ opacity: 0 }}
+                    // animate={{ opacity: 1 }}
+
+
+                    // transition={{ duration: 0.5 }}
+                    className="fixed inset-0 bg-gray bg-opacity-70 backdrop-blur-sm z-50 flex items-center justify-center p-4 md:p-6"
+                    onClick={onClose}
+                    // data-aos="fade-up"
+                    exit={{ opacity: 0 }}
+                >
+                    <motion.div
+                        initial={{ scale: 0.95, opacity: 0 }}
+                        animate={{ scale: 1, opacity: 1 }}
+                        exit={{ scale: 0.95, opacity: 0 }}
+                        transition={{ type: 'spring', stiffness: 300, damping: 30 }}
+                        className="bg-[#ffff] rounded-xl shadow-2xl max-w-4xl w-full max-h-[90vh] overflow-y-auto"
+                        onClick={(e) => e.stopPropagation()}
+                    >
+                        <div className="relative">
+                            <div className="h-64 md:h-80 overflow-hidden rounded-t-xl">
+                                <img
+                                    src={service.image}
+                                    alt={service.title}
+                                    className="w-full h-full object-cover"
+                                />
+                                <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-60"></div>
+                            </div>
+                        </div>
+                        <motion.button
+                            className="fixed z-50 top-15 lg:top-13 right-7 lg:right-85 font-extrabold text-white text-2xl cursor-pointer bg-[#df3939] hover:bg-[#ac2626]  bg-opacity-70  rounded-full h-10 w-10 flex items-center justify-center"
+                            whileHover={{ scale: 1.1 }}
+                            whileTap={{ scale: 0.9 }}
+                            onClick={onClose}
+                            // data-aos="fade-bottom"
+                            // data-aos-duration="500"
+                            exit={{ opacity: 0 }}
+                        >
+                            <IoClose />
+
+
+                        </motion.button>
+
+
+                        <div className="p-6 md:p-8">
+                            <h2 className="text-2xl text-[#ef4949] md:text-3xl font-montserrat font-bold mb-4">
+                                {service.id} <span className="text-black" >Events</span>
+                            </h2>
+
+                            <div className="mb-6">
+                                <p className="text-black text-justify mb-6">{service.detailedDescription}</p>
+
+                                <h3 className="text-xl font-montserrat font-semibold mb-3 text-[#ef4949]">
+
+                                    {service.title}<span className="text-black" >Services</span>
+                                </h3>
+
+                                <ul className="space-y-2 mb-6">
+                                    {service.features.map((feature, index) => (
+                                        <motion.li
+                                            key={index}
+                                            className="flex items-start"
+                                            initial={{ opacity: 0, x: -10 }}
+                                            animate={{ opacity: 1, x: 0 }}
+                                            transition={{ delay: index * 0.1 }}
+                                        >
+                                            <MdDoubleArrow className="text-[#ef4949] mr-2 mt-1" />
+                                            <span className="text-black">{feature}</span>
+                                        </motion.li>
+                                    ))}
+                                </ul>
                             </div>
 
-                            <div className="p-6 md:p-8">
-                                <h2 className="text-2xl text-[#ef4949] md:text-3xl font-montserrat font-bold mb-4">
-                                    {service.id} <span className="text-black" >Events</span>
-                                </h2>
-
-                                <div className="mb-6">
-                                    <p className="text-black mb-6">{service.detailedDescription}</p>
-
-                                    <h3 className="text-xl font-montserrat font-semibold mb-3 text-[#ef4949]">
-
-                                        {service.title}<span className="text-black" >Services</span>
-                                    </h3>
-
-                                    <ul className="space-y-2 mb-6">
-                                        {service.features.map((feature, index) => (
-                                            <motion.li
-                                                key={index}
-                                                className="flex items-start"
-                                                initial={{ opacity: 0, x: -10 }}
-                                                animate={{ opacity: 1, x: 0 }}
-                                                transition={{ delay: index * 0.1 }}
-                                            >
-                                                <MdDoubleArrow className="text-[#ef4949] mr-2 mt-1" />
-                                                <span className="text-black">{feature}</span>
-                                            </motion.li>
-                                        ))}
-                                    </ul>
-                                </div>
-
-                                <div className="sticky bottom-[0px] pb-3   inset-x-0 mx-auto max-w-7xl px-4 flex flex-wrap gap-4 pt-4 border-t border-[#333333] bg-white z-50">
-                                    <button
-                                        className="bg-[#711a1a] hover:bg-[#711a1aae] border-2 border-white  text-white px-8 py-4 rounded-full font-semibold transition-all btn-glow"
+                            <div className="sticky bottom-[0px] pb-3   inset-x-0 mx-auto max-w-full lg:px-4 px-2 flex flex-wrap gap-4 pt-4 border-t border-[#333333] bg-white z-50">
+                                {/* <button
+                                        className="bg-[#711a1a] flex lg:text-xl text-2xl  w-full lg:w-auto  hover:bg-[#711a1aae] border-2 border-white  text-white lg:px-8 px-4 lg:py-4 py-3 rounded-xl font-semibold transition-all btn-glow"
                                         onClick={handleGalleryRedirect}
                                     >
-                                        {/* <FontAwesomeIcon icon={faImage} className="mr-2" /> */}
+                                        <TbPhotoHeart className="lg:text-3xl text-4xl mr-2" />
+                                        Check our works
+                                    </button> */}
+                                {hasGalleryCategory && (
+                                    <button
+                                        className="bg-[#711a1a] flex lg:text-xl text-2xl cursor-pointer  w-full lg:w-auto  hover:bg-[#711a1aae] border-2 border-white  text-white lg:px-8 px-4 lg:py-4 py-3 rounded-xl font-semibold transition-all btn-glow"
+                                        onClick={handleGalleryRedirect}
+                                    >
+                                        <BiPhotoAlbum className="lg:text-3xl text-4xl mr-2" />
+
+                                        {/* <TbPhotoHeart className="lg:text-3xl text-4xl mr-2" /> */}
                                         Check our works
                                     </button>
-                                    <button
-                                        className="border-2  flex items-center border-white bg-[#128C7E] hover:bg-[#128c7ead] text-white px-8 py-4 rounded-full font-semibold transition-all red-glow"
-                                        onClick={() =>
-                                            window.open(
-                                                `https://wa.me/9080787009?text=Hello, I am interested in your ${service.title} services.`,
-                                                "_blank"
-                                            )
-                                        }
-                                    >
-                                        <BiLogoWhatsapp className="text-xl mr-2" />
-                                        Let's Talk
-                                    </button>
-                                </div>
-
+                                )}
+                                <button
+                                    className="border-2 lg:text-xl text-2xl w-full lg:w-auto cursor-pointer flex items-center border-white bg-[#128C7E] hover:bg-[#128c7ead] text-white lg:px-8 px-4 lg:py-4 py-3 rounded-xl font-semibold transition-all "
+                                    onClick={() =>
+                                        window.open(
+                                            `https://wa.me/9080787009?text=Hello, I am interested in your ${service.title} services.`,
+                                            "_blank"
+                                        )
+                                    }
+                                >
+                                    <BiLogoWhatsapp className="lg:text-3xl text-4xl mr-2" />
+                                    Let's Talk
+                                </button>
                             </div>
-                        </motion.div>
+
+                        </div>
+
                     </motion.div>
-                </>
-            )}
+                </motion.div>)}
+            </AnimatePresence>
+
         </AnimatePresence>
     );
 };
 
+
+
+export default ServiceDetailsModal;
 // ServiceDetailsModal.propTypes = {
 //     service: PropTypes.shape({
 //         id: PropTypes.string.isRequired,
@@ -136,5 +166,3 @@ const ServiceDetailsModal = ({ service, isOpen, onClose }) => {
 //     isOpen: PropTypes.bool.isRequired,
 //     onClose: PropTypes.func.isRequired,
 // };
-
-export default ServiceDetailsModal;

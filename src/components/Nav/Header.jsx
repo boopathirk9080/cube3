@@ -280,7 +280,7 @@
 //                                                 <span className={`absolute left-0 bottom-0 w-full h-[2px] bg-[#ef4949] transform ${activeSection === link.path ? "scale-x-100" : "scale-x-0"
 //                                                     } transition-transform duration-300`}> hello</span>
 //                                             </Link>
-                                          
+
 //                                         </motion.div>
 //                                     ))}
 //                                 </nav>
@@ -366,7 +366,7 @@
 //                 <Link to="/" className="text-xl font-bold">
 //                     <img src={logo} alt="Cube Events Logo" className="h-10" />
 //                 </Link>
-                
+
 //                 <button
 //                     className="md:hidden text-2xl"
 //                     onClick={() => setIsOpen(!isOpen)}
@@ -486,7 +486,7 @@ import { navLinks } from "../data/data";
 import { useState, useEffect } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import logo from "../assets/logo/cube-events-logo.png";
-
+import Aos from "aos";
 const Header = () => {
     const [isOpen, setIsOpen] = useState(false);
     const location = useLocation();
@@ -535,7 +535,7 @@ const Header = () => {
             );
             return;
         }
-        
+
         setActiveSection(path);
         setIsOpen(false);
         const section = document.getElementById(path.slice(1));
@@ -545,12 +545,20 @@ const Header = () => {
     };
 
     return (
-        <header className="text-white sticky top-0 w-full z-50">
-            <div className="container absolute bg-[#00000058] mx-auto flex justify-between items-center py-4 px-6">
+        // <header className="text-white sticky top-0 w-full z-50">
+        //     <div className="container absolute bg-[#00000058] mx-auto flex justify-between items-center py-4 px-6">
+        <header className="text-white sticky top-0 w-full bg-[#00000058]   mx-auto flex  rounded-b-2xl   justify-center mt-0 z-50"
+            // data-aos="zoom-out-down"
+            data-aos="flip-up"
+        >
+            <div className="container absolute  mx-auto flex bg-[#00000058] rounded-b-xl  justify-between items-center py-4 px-6"
+
+            >
+
                 <Link to="/" className="text-xl font-bold">
-                    <img src={logo} alt="Cube Events Logo" className="h-10" />
+                    <img src={logo} alt="Cube Events Logo" className="lg:h-20 h-25 " />
                 </Link>
-                
+
                 <button
                     className="md:hidden text-2xl"
                     onClick={() => setIsOpen(!isOpen)}
@@ -564,17 +572,15 @@ const Header = () => {
                         <Link
                             key={link.id}
                             to={link.path}
-                            className={`py-2 px-4 rounded-md transition-all duration-300 relative ${
-                                activeSection === link.path
-                                    ? "text-[#ef4949] p-[20px]"
-                                    : "hover:text-[#ef4949]"
-                            }`}
+                            className={`py-2 px-4 rounded-md transition-all duration-300 relative ${activeSection === link.path
+                                ? "text-[#ef4949] p-[20px]"
+                                : "hover:text-[#ef4949]"
+                                }`}
                             onClick={() => handleNavClick(link.path)}
                         >
                             <b>{link.title}</b>
-                            <span className={`absolute left-0 bottom-0 w-full h-[2px] bg-[#ef4949] transform ${
-                                activeSection === link.path ? "scale-x-100" : "scale-x-0"
-                            } transition-transform duration-300`}></span>
+                            <span className={`absolute left-0 bottom-0 w-full h-[2px] bg-[#ef4949] transform ${activeSection === link.path ? "scale-x-100" : "scale-x-0"
+                                } transition-transform duration-300`}></span>
                         </Link>
                     ))}
                     <button
@@ -603,10 +609,10 @@ const Header = () => {
                             animate="open"
                             exit="closed"
                         >
-                            <div className="p-6">
+                            <div className="p-6 pb-100 bg-[#000000]">
                                 <div className="flex justify-between items-center mb-8">
                                     <Link to="/" className="text-xl font-bold">
-                                        <img src={logo} alt="Cube Events Logo" className="h-10" />
+                                        <img src={logo} alt="Cube Events Logo" className="lg:h-20 h-25" />
                                     </Link>
                                     <button
                                         className="text-[#EEEEEE] text-2xl"
@@ -617,19 +623,21 @@ const Header = () => {
                                 </div>
                                 <nav className="flex flex-col space-y-4">
                                     {navLinks.map((link) => (
-                                        <motion.div key={link.id} variants={itemVariants}>
+                                        <motion.div key={link.id} variants={itemVariants}
+                                            
+                                        >
                                             <Link
                                                 to={link.path}
-                                                className={`py-2 text-[#EEEEEE] hover:text-[#ef4949] transition-colors ${
-                                                    activeSection === link.path ? "text-[#ef4949]" : ""
-                                                }`}
+                                                className={`py-2 text-[#EEEEEE] hover:text-[#ef4949] transition-colors ${activeSection === link.path ? "text-[#ef4949] border-b-2  border-[#ef4949]" : ""
+                                                    }`}
                                                 onClick={() => handleNavClick(link.path)}
                                             >
                                                 {link.title}
-                                                <span className={`absolute left-0 bottom-0 w-full h-[2px] bg-[#ef4949] transform ${
-                                                    activeSection === link.path ? "scale-x-100" : "scale-x-0"
-                                                } transition-transform duration-300`}></span>
+                                                {/* <span className={`absolute left-0 bottom-0 w-full h-[2px] bg-[#ef4949] transform ${activeSection === link.path ? "scale-x-100" : "scale-x-0"
+                                                    } transition-transform duration-300`}></span> */}
+
                                             </Link>
+
                                         </motion.div>
                                     ))}
                                     <motion.div variants={itemVariants}>
@@ -637,7 +645,7 @@ const Header = () => {
                                             onClick={() => handleNavClick('whatsapp')}
                                             className="py-2 text-[#EEEEEE] hover:text-[#ef4949] transition-colors w-full text-left"
                                         >
-                                            Contact Us
+                                            +91 90807 87009
                                         </button>
                                     </motion.div>
                                 </nav>

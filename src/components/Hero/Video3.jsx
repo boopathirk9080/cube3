@@ -9,6 +9,8 @@ import ver1 from '../assets/videos/ver1.gif';
 import ver2 from '../assets/videos/ver2.gif';
 import ver3 from '../assets/videos/ver3.gif';
 
+import HoverText from '../Hero/HoverText/HoverText';
+import { Link } from 'react-router-dom';
 
 // Horizontal video slides
 const horSlides = [
@@ -54,7 +56,7 @@ export function VideoCarouselBasicExample() {
 
     const prevSlide = () => setCurrent(prev => (prev - 1 + slides.length) % slides.length);
     const nextSlide = () => setCurrent(prev => (prev + 1) % slides.length);
-
+    const containerRef = useRef(null);
     return (
         <div className="relative w-full   md:h-[760px] top-0 z-0  overflow-hidden">
             <div className="flex transition-transform duration-700 ease-in-out" style={{ transform: `translateX(-${current * 100}%)` }}
@@ -114,13 +116,35 @@ export function VideoCarouselBasicExample() {
                     <Button />
                 </div>
             ) : (
-                <div className="absolute inset-x-[5%] md:inset-x-[10%]   top-[40%] md:top-[50%] transform -translate-y-1/2 py-4 text-left text-white">
+                <div className="absolute inset-x-0 md:inset-x-[10%] top-1/2 transform -translate-y-1/2 px-4 md:px-0 text-center md:text-left text-white space-y-6">
+                    <h5 className="text-3xl md:text-4xl font-bold tracking-wide">
+                        Content Head
+                    </h5>
 
-                    <b><h5 className="text-2xl md:text-xl">Content Head</h5></b>
-                    <b> <p className="text-sm md:text-base w-full md:w-2xl">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, tempora voluptatem! Recusandae, vero debitis! Quis laboriosam quasi assumenda aperiam veniam? Molestias quae modi voluptas illum cupiditate! Tempore sunt dolorum quis.</p>
-                    </b> <div>
-
-                        <Button />
+                    {/* <p className="text-base md:text-lg max-w-xl md:max-w-2xl mx-auto md:mx-0 leading-relaxed">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, tempora voluptatem!
+                        Recusandae, vero debitis! Quis laboriosam quasi assumenda aperiam veniam? Molestias quae modi
+                        voluptas illum cupiditate! Tempore sunt dolorum quis.
+                    </p>
+                     */}
+                    <div
+                        ref={containerRef}
+                        style={{ position: 'relative' }}
+                        className='w-full md:w-3xl text-left mx-auto md:mx-0 text-base md:text-[20px] max-w-xl leading-relaxed'
+                    >
+                        <HoverText
+                            label={'lorem ipsum dolor sit amet consectetur adipisicing elit. loream Voluptatibus, tempora voluptatem! Recusandae, vero debitis! Quis laboriosam quasi assumenda aperiam veniam? Molestias quae modi voluptas illum cupiditate! Tempore sunt dolorum quis.'}
+                            className={'variable-proximity-demo'}
+                            fromFontVariationSettings="'wght' 400, 'opsz' 9"
+                            toFontVariationSettings="'wght' 1000, 'opsz' 40"
+                            containerRef={containerRef}
+                            radius={100}
+                            falloff='linear'
+                        />
+                    </div>
+                    <div className="mt-0 md:mt-6">
+                        <Link to="/contact" ><Button />
+                        </Link>
                     </div>
                 </div>
             )}
@@ -131,3 +155,5 @@ export function VideoCarouselBasicExample() {
 }
 
 export default VideoCarouselBasicExample;
+
+

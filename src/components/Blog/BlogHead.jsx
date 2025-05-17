@@ -27,7 +27,7 @@ export function BlogHead() {
   }, []);
 
   return (
-    <div className="relative w-full overflow-hidden h-50 md:h-[20rem] lg:pt-20 pt-20 rounded-b-lg flex items-center justify-center">
+    <div className="relative w-full overflow-hidden h-80 pt-35  md:h-[20rem] lg:pt-20  rounded-b-lg flex items-center justify-center">
       {/* Arrow Pattern Background Layer */}
       <div className="absolute inset-0 z-0">
         {/* <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-transparent via-transparent to-black/10"></div> */}
@@ -56,7 +56,7 @@ export function BlogHead() {
       <div className="relative flex flex-col gap-4 items-center justify-center px-4">
         <div ref={textRef} className="text-2xl md:text-4xl font-bold text-center relative z-10">
           <SplitText
-            text="BLOG"
+            text="BLOGS"
             className="inline-block"
             delay={150}
             animationFrom={{ opacity: 0, transform: "translate3d(0,50px,0)" }}

@@ -61,7 +61,7 @@
 //             threshold={0.2}
 //             rootMargin="-50px"
 //           />
-          
+
 //         </div>
 //       </motion.div>
 //     </div>
@@ -81,7 +81,7 @@ import { motion } from "framer-motion";
 import SplitText from "../SectionHead/SplitText";
 import sun from "../assets/logo/sun.svg";
 
-export function AboutHead() {
+export function ServicesHead() {
   const textRef = useRef(null);
 
   useEffect(() => {
@@ -96,14 +96,14 @@ export function AboutHead() {
       if (char.trim() === "") {
         span.style.color = "#000000";
       } else {
-        span.style.color = letterCount < 5 ? "#393433" : "#ffff";
+        span.style.color = letterCount < 5 ? "#ffff" : "#ffff";
         letterCount++;
       }
     });
   }, []);
 
   return (
-    <div className="relative w-full overflow-hidden h-50 md:h-[20rem] lg:pt-20 pt-20 rounded-b-lg flex items-center justify-center">
+    <div className="relative w-full overflow-hidden h-80 pt-35  md:h-[20rem] lg:pt-20 rounded-b-lg flex items-center justify-center">
       {/* Arrow Pattern Background Layer */}
       <div className="absolute inset-0 z-0">
         {/* <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-transparent via-transparent to-black/10"></div> */}
@@ -147,4 +147,4 @@ export function AboutHead() {
   );
 }
 
-export default AboutHead;
+export default ServicesHead;

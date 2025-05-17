@@ -11,7 +11,7 @@ const AboutBase = () => {
         transition={{ duration: 0.5 }}
       >
         <h2 className="text-3xl md:text-4xl font-montserrat font-bold mb-4">
-          <span className="text-[#ef4949]">About</span>
+          <span className="text-[#ef4949]">Shaping Tomorrow's Digital Ecosystems</span>
         </h2>
         <p className="text-black max-w-2xl p-5 text-lg sm:text-2xl mx-auto">
           We handle every aspect of your event with precision and creativity,

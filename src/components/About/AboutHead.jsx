@@ -257,7 +257,7 @@
 
 import React, { useEffect, useRef } from "react";
 import { motion } from "framer-motion";
-import SplitText from "./SplitText";
+import SplitText from "../SectionHead/SplitText";
 import sun from "../assets/logo/sun.svg";
 
 export function AboutHead() {
@@ -275,14 +275,14 @@ export function AboutHead() {
       if (char.trim() === "") {
         span.style.color = "#000000";
       } else {
-        span.style.color = letterCount < 6 ? "#fff" : "##c92d2d";
+        span.style.color = letterCount < 6 ? "#ffff" : "#ffff";
         letterCount++;
       }
     });
   }, []);
 
   return (
-    <div className="relative w-full overflow-hidden h-50 md:h-[20rem] lg:pt-20 pt-20 rounded-b-lg flex items-center justify-center">
+    <div className="relative w-full overflow-hidden h-80  md:h-[20rem] lg:pt-20 pt-35 rounded-b-lg flex items-center justify-center">
       {/* Arrow Pattern Background Layer */}
       <div className="absolute inset-0 z-0">
         {/* <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-transparent via-transparent to-black/10"></div> */}
