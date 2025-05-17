@@ -406,7 +406,7 @@ export function WorldMapDemo() {
                         ))}
                     </span>
                 </p>
-                <p className="text-sm md:text-lg text-neutral-500 max-w-2xl mx-auto lg:mb-0 mb-8">
+                <p className="text-sm md:text-lg px-5 text-neutral-500 max-w-2xl mx-auto lg:mb-0 mb-8">
                     Break free from traditional boundaries. Work from anywhere, at the
                     comfort of your own studio apartment. Perfect for Nomads and
                     Travellers.
