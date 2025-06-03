@@ -2,9 +2,9 @@ import { motion } from "framer-motion";
 import base1 from '../assets/missionvision/mission.jpg'
 const AboutBase = () => {
   return (
-    <div className="pt-10 pb-10" >
+    <div className="pt-10 bg-gradient-to-t from-[#f8f8f8] to-[#fbd6d7] pb-10" >
       <motion.div
-        className="text-center mb-16"
+        className="text-center mb-16  "
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
@@ -18,9 +18,9 @@ const AboutBase = () => {
           ensuring a seamless experience from start to finish.
         </p>
       </motion.div>
-      <section className="relative w-full max-w-6xl mx-auto bg-gray-100 dark:bg-gray-800 rounded-3xl flex flex-col md:flex-row items-center py-8 px-4  md:py-12 md:px-8 overflow-hidden gap-8x">
+      <section className="relative w-full max-w-6xl mx-auto bg-gradient-to-t from-[#fbd6d7] to-[#c229294a] dark:bg-gray-800 rounded-3xl flex flex-col md:flex-row items-center py-8 px-4  md:py-12 md:px-8 overflow-hidden gap-8x">
       
-      <div className="max-w-7xl mx-auto">
+      <div className="max-w-7xl  mx-auto">
         <div className="flex flex-col lg:flex-row items-center justify-center gap-8">
           {/* Left Side Content */}
           <div className=" lg:w-[400px] lg:h-[400px] sm:w-full sm:h-[400px]  mx-auto">

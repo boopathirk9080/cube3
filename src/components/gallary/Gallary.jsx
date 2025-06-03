@@ -3,11 +3,8 @@ import { gallery } from '../data/data';
 import { FaChevronLeft, FaChevronRight, FaTimes } from 'react-icons/fa';
 import Aos from 'aos';
 import { useLocation } from 'react-router-dom';
-
 import { motion } from "framer-motion";
 function Gallery() {
-
-
 
     const [list, setList] = useState(gallery);
     const [selectedImage, setSelectedImage] = useState(null);
@@ -61,10 +58,10 @@ function Gallery() {
     useEffect(() => {
         Aos.init({ duration: 1000 });
     }, []);
-    
+
 
     return (
-        <article className="pt-8 pb-10 lg:pb-15 px-4  sm:px-6 lg:px-8 w-full bg-gradient-to-t from-[#ffff] to-[#e8e8e849]">
+        <article className="pt-8 pb-10 lg:pb-15 px-4  sm:px-6 lg:px-8 w-full bg-gradient-to-t from-[#f8b0b2] to-[#fdeced]">
             <div className="text-center mb-8 sm:mb-12 max-w-9xl mx-auto ">
                 <div>
                     {/* content */}
@@ -94,8 +91,8 @@ function Gallery() {
                             className={
                                 `lg:px-4 px-3 lg:py-2 py-1 rounded-lg  transition-colors cursor-pointer text-[18px] lg:text-base
                                   ${activeCategory === cat
-                                    ? 'bg-orange-900 text-white'
-                                    : 'bg-[#14305a] text-white hover:bg-blue-900'}`
+                                    ? 'bg-[#5a141424] text-[#ee332295]'
+                                    : 'bg-[#5a141495] text-white hover:bg-[#b87678] '}`
                             }
                         >
                             <b>{cat}</b>
@@ -106,12 +103,12 @@ function Gallery() {
             {/* List of images */}
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 max-w-7xl mx-auto">
                 {list.map((item, index) => (
-                    <div key={item.id} className="group relative bg-blue-900 rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all">
+                    <div key={item.id} className="group relative bg-[#ef494959] rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all">
                         <img data-aos="fade-up"
                             data-aos-anchor-placement="center-bottom"
                             src={item.coverimg}
                             alt={item.title}
-                            className="w-full h-48 object-cover cursor-pointer border-2 rounded-2xl border-[#ef4949] hover:border-blue-500 transition-all"
+                            className="w-full h-48 object-cover cursor-pointer border-2 rounded-2xl border-[#ef4949] hover:border-[#a86c6c] transition-all"
                             onClick={() => openImageModal(item.coverimg, index)}
                         />
                     </div>

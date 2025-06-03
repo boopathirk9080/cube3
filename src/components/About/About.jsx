@@ -5,7 +5,6 @@ import WorldMap from "../World Map/WorldMap";
 import Counter from "./Counter";
 // import GridAnimatee from '../AnimatedCheck/GridAimate'
 import ThreeDMarquee from '../AnimatedCheck/ThreeDMarquee'
-import TextTransform from '../TextTransform/TextTransform'
 import OurMission from '../ourmission/OurMission'
 import AboutSection from './AboutSection'
 import AboutBase from './AboutBase';
@@ -14,7 +13,7 @@ import SectionHead from './AboutHead';
 import Wave from '../waves/Wave'
 function About() {
   return (
-    <div id='about' >
+    <div id='about' className='bg-[#fbd6d7]' >
       <SectionHead />
       {/* <About21 /> */}
       {/* <Wave /> */}

@@ -69,7 +69,7 @@ const ServicesSection = () => {
   return (
     <section
       // id="services"
-      className="bg-[#e8e8e849] py-8  md:pyb-32 scroll-smooth" // ← smooth scroll
+      className="bg-gradient-to-t from-[#fdeced] to-[#fbd6d7] py-8  md:pyb-32 scroll-smooth" // ← smooth scroll
     >
       <div className="container mx-auto px-4">
         <motion.div
@@ -128,7 +128,7 @@ const ServicesSection = () => {
           {services.slice(0, visibleCount).map((service) => (
             <motion.div
               key={service.id}
-              className="bg-[#ffff] p-3 rounded-xl  shadow-2xl   hover:shadow-[#fafafa]   hover:border-[#ef4949] transition-all duration-300 h-full group cursor-pointer relative overflow-hidden"
+              className="bg-[#f8b0b2] hover:bg-[#f8a9ab] p-3 rounded-[24px]  shadow-2xl   hover:shadow-[#fafafa]   hover:border-[#ef4949] transition-all duration-300 h-full group cursor-pointer relative overflow-hidden"
               variants={itemVariants}
               initial="hidden"
               whileInView="visible"
@@ -142,13 +142,13 @@ const ServicesSection = () => {
                 <img
                   src={service.image}
                   alt={service.title}
-                  className="w-full h-auto"
+                  className="w-full rounded-xl h-auto"
                 />
               </div>
               <div className="text-[#ef4949] text-3xl mb-4 group-hover:scale-110 transition-transform duration-300">
                 <i className={`fas fa-${service.icon}`} />
               </div>
-              <h3 className="text-xl font-montserrat font-bold mb-3 text-black group-hover:text-[#ef4949] transition-colors">
+              <h3 className="text-xl font-montserrat font-bold mb-3 text-black group-hover:text-[#fdeced] transition-colors">
                 {service.title}
               </h3>
               <p className="text-[#000] mb-6">{service.description}</p>

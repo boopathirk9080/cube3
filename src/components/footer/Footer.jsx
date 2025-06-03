@@ -32,7 +32,10 @@
 
 "use client";
 import { motion } from "framer-motion";
-import { LinkedIn, Instagram, Email, Twitter, Phone } from "@mui/icons-material";
+import { LinkedIn, Instagram, Email, Phone } from "@mui/icons-material";
+import XIcon from '@mui/icons-material/X';
+import YouTubeIcon from '@mui/icons-material/YouTube';
+import FacebookIcon from '@mui/icons-material/Facebook';
 import { useInView } from "react-intersection-observer";
 import { Link } from 'react-router-dom';
 import { navLinks } from "../data/data";
@@ -72,12 +75,13 @@ function Footer() {
 
     // Filter out phone from navigation links
     const filteredLinks = navLinks.filter(link => link.id !== "phone");
-
     const socials = [
         // { icon: <Email />, link: "mailto:contact.cube3events@gmail.com" },
         { icon: <LinkedIn />, link: "https://www.linkedin.com/company/cube3-events/" },
-        { icon: <Twitter />, link: "https://x.com/cube3_events" },
-        { icon: <Instagram />, link: "https://www.instagram.com/cube3events/" }
+        { icon: <XIcon />, link: "https://x.com/cube3_events" },
+        { icon: <Instagram />, link: "https://www.instagram.com/cube3events/" },
+        { icon: <FacebookIcon />, link: "https://www.youtube.com/@cube3events" },
+        { icon: <YouTubeIcon />, link: "https://www.youtube.com/@cube3events" }
     ];
 
     return (
@@ -101,7 +105,7 @@ function Footer() {
                         className="text-4xl font-bold bg-gradient-to-r from-[#ee393e] to-[#ff6b6b] bg-clip-text text-transparent"
                         whileHover={{ scale: 1.02 }}
                     >
-                        <img src={Logo} alt=""  />
+                        <img src={Logo} alt="" />
                     </motion.h3>
                     <p className="text-base text-justify leading-relaxed opacity-90 hover:opacity-100 transition-opacity duration-300">
                         Life is one great celebration. We create immersive corporate experiences
@@ -113,7 +117,7 @@ function Footer() {
                 {/* Quick Links */}
                 <motion.div variants={itemVariants} className="space-y-6">
                     <h3 className="text-2xl font-bold text-[#ee393e] neon-glow">Quick Links</h3>
-                    <div className="grid grid-cols-2 gap-4">
+                    <div className="grid grid-cols-1 gap-[10px]">
                         {filteredLinks.map((link) => (
                             <motion.div
                                 key={link.id}
@@ -125,7 +129,7 @@ function Footer() {
                                     className="group flex items-center space-x-3 text-base hover:text-[#ee393e] transition-all"
                                 >
                                     <span className="w-3 h-3 bg-[#ee393e] rounded-full opacity-0 group-hover:opacity-100 transition-opacity shadow-glow" />
-                                    <span className="hover:underline decoration-[#ee393e]">{link.title}</span>
+                                    <span className="hover:underline font-semibold decoration-[#ee393e]">{link.title}</span>
                                 </Link>
                             </motion.div>
                         ))}
@@ -140,19 +144,19 @@ function Footer() {
                                 //   whileTap={{ scale: 0.9 }}
                                 className="px-3 rounded-xl flex  duration-300 "
                             >
-                                <Phone className="text-2xl" />
-                                <span> &nbsp; &nbsp;(+91) 82200 03139</span>
+                                <Phone className="text-2xl  " />
+                                <span className="font-semibold" > &nbsp; &nbsp;(+91) 82200 03139</span>
                             </motion.div>
-                           
-                                <motion.div
-                                    //   whileHover={{ scale: 1.1 }}
-                                    //   whileTap={{ scale: 0.9 }}
-                                    className="px-3 rounded-xl flex  duration-300 "
-                                >
-                                    <Email className="text-2xl" />
-                                    <span > &nbsp; &nbsp;cube3eventssalem@gmail.com</span>
-                                </motion.div>
-                            
+
+                            <motion.div
+                                //   whileHover={{ scale: 1.1 }}
+                                //   whileTap={{ scale: 0.9 }}
+                                className="px-3 rounded-xl flex  duration-300 "
+                            >
+                                <Email className="text-2xl" />
+                                <span className="font-semibold" > &nbsp; &nbsp;info@cube3events</span>
+                            </motion.div>
+
                         </div>
                     </motion.div>
                     <motion.div variants={itemVariants} className="space-y-6">
@@ -205,7 +209,7 @@ function Footer() {
                             style={{ cursor: "pointer" }}
                             className="font-medium"> CUBE3 EVENTS.</span> All Rights Reserved.
                         <span className="mx-3 text-[#ee393e]">•</span>
-                        Developed by <span
+                        Designed and Developed by <span
                             style={{ cursor: "pointer" }}
 
                             className=" font-medium"><a href="https://www.linkedin.com/company/liro-studios">Liro Studios</a></span>

@@ -1,0 +1,69 @@
+/* Logo.css */
+.tag-list {
+  width: 65%;
+  font-family: "montserrat", sans-serif;
+  position: relative;
+  overflow: hidden;
+  margin: 0 auto;
+  /* gap: 2rem; */
+  height: 4rem; /* Added fixed height */
+  background:#f8f8f8;
+}
+@media (max-width: 640px) {
+  .tag-list {
+    width: 80%;
+  }
+}
+
+.tag-list::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 6rem;
+  height: 100%;
+  background: linear-gradient(to left, transparent, #f8f8f8); /* Fixed gradient */
+  pointer-events: none;
+  z-index: 2; /* Ensure fade is above content */
+}
+
+.inner {
+  display: flex;
+  gap: 2rem;
+  width: max-content;
+  animation: loop 20s linear infinite; /* Slower animation */
+  height: 100%;
+  align-items: center; /* Center logos vertically */
+}
+
+.tag {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.tag img {
+  height: 3rem; /* Control logo size */
+  width: auto; /* Maintain aspect ratio */
+}
+
+.fade {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 6rem;
+  height: 100%;
+  background: linear-gradient(to right, transparent, #f8f8f8); /* Fixed gradient */
+  pointer-events: none;
+  z-index: 2; /* Ensure fade is above content */
+}
+
+@keyframes loop {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-25%); /* Match duplicated array */
+  }
+}

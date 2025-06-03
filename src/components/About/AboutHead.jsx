@@ -282,7 +282,7 @@ export function AboutHead() {
   }, []);
 
   return (
-    <div className="relative w-full overflow-hidden h-80  md:h-[20rem] lg:pt-20 pt-35 rounded-b-lg flex items-center justify-center">
+    <div className="relative w-full overflow-hidden h-80 bg-[#fbd6d7]  md:h-[20rem] lg:pt-20 pt-35 rounded-b-lg flex items-center justify-center">
       {/* Arrow Pattern Background Layer */}
       <div className="absolute inset-0 z-0">
         {/* <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-transparent via-transparent to-black/10"></div> */}

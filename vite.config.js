@@ -36,6 +36,8 @@ export default defineConfig({
     minify: 'terser',
     chunkSizeWarningLimit: 1000,
   },
+
+
   plugins: [tailwindcss(), react()],
   server: { historyApiFallback: true },
 });

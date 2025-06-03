@@ -4,24 +4,23 @@ import Service from "../Service/Service";
 import Portfolio from "../gallary/Gallary";
 import ContactUs from "../contact/ContactUs";
 import Video3 from "../Hero/Video3";
-import Slide from '../Slider/Slide'
-import ParallaxSlider from "../Slider/ParallaxSlider";
+// import Slide from '../Slider/Slide'
 import WorldMap from "../World Map/WorldMap";
 import Counter from "../About/Counter";
 import Base from '../Hero/Base'
-import dynamic from 'next/dynamic';
-import TextTransform from "../TextTransform/TextTransform";
+import ALogoAnimat from "../ALogoAnimate/LogoAnimat";
+import CompanyLogo from "../CompanyLogo/CompanyLogo";
+
 function Home() {
 
   return (
     <div id="/" className=" max-w-[100%] bg-[#e8e8e849] " >
       <Video3 />
-      {/* <TextTransform /> */}
-
+      {/* <ALogoAnimat/> */}
       <Base />
-      <div className=" bg-[#ffff">
-        <WorldMap />
-      </div>
+
+      <WorldMap />
+<CompanyLogo/>
 
       <Counter />
       <Service />

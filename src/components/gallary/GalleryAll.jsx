@@ -4,7 +4,7 @@ import Gallery from './Gallary'
 
 function GalleryAll() {
   return (
-    <div id='gallery' >
+    <div id='gallery' className='bg-[#fdeced]' >
         <GalleryHead/>
         <Gallery/>
     </div>

@@ -6,7 +6,7 @@ const BlogDetails = ({ service: post, isOpen, onClose }) => {
     <AnimatePresence>
       {isOpen && (
         <motion.div
-          className="fixed inset-0 p-2 z-50 backdrop-blur-sm"
+          className="fixed inset-0 p-2 z-50  backdrop-blur-sm"
           // initial={{ opacity: 0 }}
           // animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
@@ -17,7 +17,7 @@ const BlogDetails = ({ service: post, isOpen, onClose }) => {
           />
 
           <motion.div
-            className="relative mx-auto my-8 max-w-4xl rounded-xl bg-white shadow-xl"
+            className="relative mx-auto my-8 max-w-4xl  bg-white shadow-xl rounded-xl"
             initial={{ scale: 0.95, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
             exit={{ scale: 0.95, opacity: 0 }}
@@ -35,7 +35,7 @@ const BlogDetails = ({ service: post, isOpen, onClose }) => {
             </motion.button>
 
             {post && (
-              <div className="max-h-[90vh] overflow-y-auto">
+              <div className="max-h-[90vh] rounded-xl overflow-y-auto">
                 <img
                   src={post.image}
                   alt={post.title}
@@ -70,3 +70,11 @@ const BlogDetails = ({ service: post, isOpen, onClose }) => {
 };
 
 export default BlogDetails;
+
+
+
+
+
+
+
+

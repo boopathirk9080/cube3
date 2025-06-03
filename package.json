@@ -22,7 +22,7 @@
     "@fortawesome/free-solid-svg-icons": "^6.7.2",
     "@fortawesome/react-fontawesome": "^0.2.2",
     "@mui/icons-material": "^6.4.11",
-    "@mui/material": "^6.4.6",
+    "@mui/material": "^6.4.11",
     "@react-spring/web": "^9.7.5",
     "@tabler/icons-react": "^3.31.0",
     "@tailwindcss/vite": "^4.0.9",
@@ -50,7 +50,6 @@
     "slick-carousel": "^1.8.1",
     "styled-components": "^6.1.18",
     "tailwind-merge": "^3.3.0",
-    "tailwindcss": "^4.0.9",
     "tw-elements-react": "^1.0.0-alpha-end",
     "typewriter-effect": "^2.21.0"
   },
@@ -60,11 +59,14 @@
     "@types/react-dom": "^19.0.4",
     "@types/styled-components": "^5.1.34",
     "@vitejs/plugin-react": "^4.3.4",
+    "autoprefixer": "^10.4.21",
     "eslint": "^9.21.0",
     "eslint-plugin-react-hooks": "^5.1.0",
     "eslint-plugin-react-refresh": "^0.4.19",
     "gh-pages": "^6.3.0",
     "globals": "^15.15.0",
+    "postcss": "^8.5.4",
+    "tailwindcss": "^4.1.8",
     "tw-animate-css": "^1.2.9",
     "vite": "^6.2.0"
   }

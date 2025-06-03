@@ -112,7 +112,7 @@ export function VideoCarouselBasicExample() {
                 <div className="absolute inset-x-[5%] md:inset-x-[10%]  top-[40%] md:top-[50%] transform -translate-y-1/2 py-4 text-center text-white">
                     <br /> <br /> <br />
                     <b><h5 className="text-2xl md:text-xl">Content Head</h5></b>
-                    <p className="text-[16px] md:text-base w-[100%]   p-[20px] md:w-2xl">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, tempora voluptatem! Recusandae, vero debitis! Quis  illum cupiditate! Tempore sunt dolorum quis.</p>
+                    <p className="text-[16px] md:text-base w-[100%] font-afacad  p-[20px] md:w-2xl">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, tempora voluptatem! Recusandae, vero debitis! Quis  illum cupiditate! Tempore sunt dolorum quis.</p>
                     <Button />
                 </div>
             ) : (

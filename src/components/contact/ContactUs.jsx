@@ -654,16 +654,18 @@ import { motion } from "framer-motion";
 import { RiBuilding3Fill } from "react-icons/ri";
 import { RiBuilding2Fill } from "react-icons/ri";
 import Aos from "aos";
+
+
 export default function Contact() {
-     useEffect(() => {
-            Aos.init({
-                duration: 800,
-                once: true,
-                offset: 100
-            });
-            
-            return () => Aos.refresh();
-        }, []);
+    useEffect(() => {
+        Aos.init({
+            duration: 800,
+            once: true,
+            offset: 100
+        });
+
+        return () => Aos.refresh();
+    }, []);
     const [formData, setFormData] = useState({
         fullName: "",
         email: "",
@@ -703,7 +705,7 @@ export default function Contact() {
     };
 
     return (
-        <div className="bg-[#e8e8e849]">
+        <div className="bg-gradient-to-t from-[#f47b7f] to-[#f8b0b2]">
             {/* Hero Section */}
             <section className="lg:pb-16 pb-10 pt-8 md:pb-32   px-4 sm:px-6 lg:px-8 w-full ">
                 <motion.div
@@ -867,24 +869,30 @@ export default function Contact() {
                                             required
                                         />
                                     </div>
-                                    <div>
                                         <label className="block font-medium mb-2 text-black">Event Type</label>
                                         <select
                                             name="eventType"
                                             value={formData.eventType}
                                             onChange={handleChange}
-                                            className="w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#ef4949] text-black"
+                                            className="w-full px-4 py-3  border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#ef4949] text-black"
                                             required
                                         >
                                             <option value="" disabled>Select Event Type</option>
-                                            <option value="Wedding">Wedding</option>
-                                            <option value="Corporate Event">Corporate Event</option>
-                                            <option value="Birthday Party">Birthday Party</option>
-                                            <option value="Concert">Concert</option>
-                                            <option value="Exhibition">Exhibition</option>
-                                            <option value="Other">Other</option>
+                                            <option value="Corporate Events">Corporate Events</option>
+                                            <option value="Rewards and Recognition Events">Rewards and Recognition Events</option>
+                                            <option value="Awards Nights">Awards Nights</option>
+                                            <option value="AGMs">AGMs</option>
+                                            <option value="Expos and Conferences">Expos and Conferences</option>
+                                            <option value="Team Building Events">Team Building Events</option>
+                                            <option value="Client Meets">Client Meets</option>
+                                            <option value="Wedding Planning">Wedding Planning</option>
+                                            <option value="Destination Wedding">Destination Wedding</option>
+                                            <option value="Entertainment Events">Entertainment Events</option>
+                                            <option value="Birthday Party Planning">Birthday Party Planning</option>
+                                            <option value="Catering Services">Catering Services</option>
+                                            <option value="Photography Services">Photography Services</option>
                                         </select>
-                                    </div>
+                                  
                                     <div>
                                         <label className="block font-medium mb-2 text-black">Message</label>
                                         <textarea
@@ -899,7 +907,7 @@ export default function Contact() {
                                     </div>
                                     <button
                                         type="submit"
-                                        className="w-full bg-[#25D366] text-white py-3 rounded-lg hover:bg-[#21a451] cursor-pointer transition-colors font-medium"
+                                        className="w-full bg-[#ef4949] text-white py-3 rounded-lg hover:bg-[#e32] cursor-pointer transition-colors font-semibold"
                                         disabled={isSubmitting}
                                     >
                                         {isSubmitting ? "Sending..." : "Send Message"}
